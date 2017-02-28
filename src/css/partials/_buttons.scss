@@ -1,0 +1,59 @@
+/* ===============================
+      GENERAL BUTTON STYLES
+=============================== */
+button {
+  color: #fff;
+  outline: none;
+  border: 2px solid $light-grey;
+  background: $medium-grey;
+  transition:border 300ms, background 300ms, color 400ms;
+  border-radius: 4px;
+  padding: 0.65rem;
+  &:hover {
+    background: $light-grey;
+    color: $dark-grey;
+    border: 2px solid $medium-grey;
+  }
+  &.disabled {
+    background: $medium-grey;
+    color: $dark-grey;
+  }
+}
+
+div.nav-btns {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 3rem;
+  button {
+    width: 10%;
+    padding: 0.5rem 0;
+  }
+}
+
+button.disabled {
+  pointer-events: none;
+  &.prev-tab-btn, &.next-tab-btn {
+    opacity: 0.6;
+  }
+}
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 1000px) {
+  div.nav-btns {
+    width: 100%;
+    button {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.nav-btns {
+    button {
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+
+/* ===============================
+  TABS & TABS-ACCORDION STYLES
+=============================== */
+div.tabs-accordion {
+  margin: 0 auto;
+  width: 90%;
+  div.tab-nav-btns {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    button.tab-nav {
+      margin: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      border: 2px solid $medium-grey;
+      outline: none;
+      border-radius: 5px;
+      background: $light-grey;
+      color: $medium-dark-grey;
+      transition: color 400ms, background 300ms;
+      &:hover {
+        background: $medium-grey;
+        color: #fff;
+      }
+      &.disabled {
+        background: #fff;
+        color: $medium-dark-grey;
+      }
+    }
+  }
+  div.tab {
+    background: #fff;
+    padding: 1.5rem 2.5rem;
+    border-top: 2px solid $medium-grey;
+    border-bottom: 2px solid $medium-grey;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 1300px) {
+  // div.tabs-accordion {
+  //   width: 95%;
+  //   div.tab-nav-btns {
+  //   //   width: 95%;
+  //     button.tab-nav {
+  //       margin: 0.15rem 0.25rem;
+  //       padding: 0.25rem 0.65rem;
+  //       border-radius: 5px;
+  //       &.disabled {
+  //         border-bottom: 2px solid $medium-grey;
+  //       }
+  //     }
+  //   }
+  //   div.tab {
+  //     padding: 0.5rem;
+  //     margin-bottom: 1rem;
+  //   }
+  // }
+}
+
+@media screen and (max-width: 700px) {
+  div.tabs-accordion {
+    width: 98%;
+    div.tab-nav-btns {
+      width: 100%;
+      display: block;
+      button.tab-nav {
+        margin: 0;
+        width: 100%;
+        display: block;
+        padding: 0.2rem 0.5rem;
+        border-radius: 2px;
+      }
+    }
+  }
+}
