@@ -7,9 +7,10 @@ import Content from './js/components/layout/content.js';
 import TabsAccordion from './js/components/navigation/tabs-accordion.js';
 import Tab from './js/components/navigation/tab.js';
 // components -> sections
-import AboutContent from './js/components/sections/about/about-content.js';
+import HomeContent from './js/components/sections/home/home-content.js';
 import ExperienceContent from './js/components/sections/experience/experience-content.js';
 import PlaygroundContent from './js/components/sections/playground/playground-content.js';
+import ContactContent from './js/components/sections/contact/contact-content.js';
 
 
 import './App.css';
@@ -20,24 +21,31 @@ class App extends Component {
       <div className="App">
         <Header />
           <TabsAccordion tabs={[
-              <Tab index={0} label="Experience" content={
+            <Tab index={0} label="Home" content={
+              <div className="tab-content-wrapper">
+                <SubHeader subtitle="Home & About Me" divClass="home-area-header" iconsrc="../media/img/placeholder.png" iconalt="icon placeholder" />
+                <HomeContent />
+              </div>
+            } />,
+
+              <Tab index={1} label="Experience" content={
                 <div className="tab-content-wrapper">
                   <SubHeader subtitle="Professional Experience" divClass="experience-area-header" iconsrc="../media/img/placeholder.png" iconalt="icon placeholder" />
                   <ExperienceContent />
                 </div>
               } />,
 
-              <Tab index={1} label="Playground" content={
+            <Tab index={2} label="Playground" content={
                 <div className="tab-content-wrapper">
                   <SubHeader subtitle="Playground" divClass="playground-area-header" iconsrc="../media/img/placeholder.png" description="Directory of Mini Example Projects" iconalt="icon placeholder" />
                   <PlaygroundContent />
                 </div>
               } />,
 
-            <Tab index={2} label="About & Contact" content={
+            <Tab index={3} label="Contact" content={
                 <div className="tab-content-wrapper">
-                  <SubHeader subtitle="About & Contact" divClass="about-area-header" iconsrc="../media/img/placeholder.png" iconalt="icon placeholder" />
-                  <AboutContent />
+                  <SubHeader subtitle="Contact" divClass="contact-area-header" iconsrc="../media/img/placeholder.png" iconalt="icon placeholder" />
+                  <ContactContent />
                 </div>
               } />
             ]} />
