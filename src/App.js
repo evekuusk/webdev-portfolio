@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // components -> layout
 import Header from './js/components/layout/header.js';
 import SubHeader from './js/components/layout/subheader.js';
-import Content from './js/components/layout/content.js';
 import Footer from './js/components/layout/footer.js';
 // components -> navigation
 import TabsAccordion from './js/components/navigation/tabs-accordion.js';

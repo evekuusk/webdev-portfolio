@@ -14,9 +14,17 @@ button {
     color: $dark-grey;
     border: 2px solid $medium-grey;
   }
+  &.submit {
+    margin-top: 0.65rem;
+    width: 6.5rem;
+    font-size: 1.15rem;
+  }
   &.disabled {
     background: $medium-grey;
     color: $dark-grey;
+    &.submit {
+      opacity: 0.5;
+    }
   }
 }
 

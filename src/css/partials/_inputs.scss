@@ -1,0 +1,32 @@
+
+/* ===============================
+          INPUT STYLES
+=============================== */
+input[type='text'], textarea {
+  margin-top: 0;
+}
+
+input[type='text'] {
+  margin-left: 0;
+  width: 35%;
+}
+
+textarea {
+  margin-bottom: 0.65rem;
+  resize: none;
+  width: 50%;
+  height: 4rem;
+}
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 700px) {
+  input[type='text'] {
+    width: 75%;
+  }
+  textarea {
+    width: 90%;
+    height: 6rem;
+  }
+}

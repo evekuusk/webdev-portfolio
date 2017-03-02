@@ -10,7 +10,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif;
 }
 
-p, button {
+h5.input-label {
+  margin-bottom: 0.15rem;
+}
+
+p, button, label {
   font-family: 'Titillium Web', sans-serif;
 }
 

@@ -2653,9 +2653,15 @@ button {
     background: #d6d6d6;
     color: #2e2e2e;
     border: 2px solid #808080; }
+  button.submit {
+    margin-top: 0.65rem;
+    width: 6.5rem;
+    font-size: 1.15rem; }
   button.disabled {
     background: #808080;
     color: #2e2e2e; }
+    button.disabled.submit {
+      opacity: 0.5; }
 
 div.nav-btns {
   width: 90%;
@@ -2691,7 +2697,10 @@ button.disabled {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif; }
 
-p, button {
+h5.input-label {
+  margin-bottom: 0.15rem; }
+
+p, button, label {
   font-family: 'Titillium Web', sans-serif; }
 
 p {
@@ -2718,5 +2727,31 @@ div.header {
 /* ===============================
           IMAGE STYLES
 =============================== */
+/* ===============================
+          INPUT STYLES
+=============================== */
+input[type='text'], textarea {
+  margin-top: 0; }
+
+input[type='text'] {
+  margin-left: 0;
+  width: 35%; }
+
+textarea {
+  margin-bottom: 0.65rem;
+  resize: none;
+  width: 50%;
+  height: 4rem; }
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 700px) {
+  input[type='text'] {
+    width: 75%; }
+
+  textarea {
+    width: 90%;
+    height: 6rem; } }
 
 /*# sourceMappingURL=App.css.map */

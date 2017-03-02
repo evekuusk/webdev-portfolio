@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import Scroll from 'react-scroll';
 
-// react-scroll library variables
-var Link       = Scroll.Link;
-var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+// react-scroll library variable
+var scroll = Scroll.animateScroll;
 
 export default class Footer extends Component {
-  constructor(props) {
-    super(props);
-  };
   backToTop() {
     scroll.scrollToTop({
       duration: 350

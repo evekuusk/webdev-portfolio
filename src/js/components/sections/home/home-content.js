@@ -32,8 +32,7 @@ export default class HomeContent extends Component {
       items = items.join(', ')
       return (
         <p key={index} className="learning-list">
-          <a href={item[1]}><span className="learning-item">{item[0]}</span></a>:
-          <span className="list">{items}</span>
+          <a href={item[1]}><span className="learning-item">{item[0]}</span></a>: &nbsp;<span className="list">{items}</span>
         </p>
       )
     });
@@ -57,6 +56,7 @@ export default class HomeContent extends Component {
         <h3>Introduction</h3>
           {introParagraph}
         <h3>Self-Directed Learning</h3>
+          <h5>Completed course tracks & stand-alone courses</h5>
           {learningList}
         <h3>Education</h3>
           <p>Currently taking pre-requisite math courses for admission into part-time evening classes for computer science</p>
