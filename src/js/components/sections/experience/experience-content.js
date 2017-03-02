@@ -6,7 +6,7 @@ export default class ExperienceContent extends Component {
   }
   render() {
     return (
-      <div className="experience-content">
+      <div className="experience-content content">
         <p>This is the Experience content section</p>
       </div>
     )

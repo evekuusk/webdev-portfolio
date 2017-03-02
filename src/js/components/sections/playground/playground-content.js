@@ -6,7 +6,7 @@ export default class PlaygroundContent extends Component {
   }
   render() {
     return (
-      <div className="playground-content">
+      <div className="playground-content content">
         <p>This is the Playground content section</p>
       </div>
     )

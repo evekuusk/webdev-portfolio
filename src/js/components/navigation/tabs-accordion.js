@@ -32,11 +32,13 @@ export default class TabsAccordion extends Component {
       <div className="tabs-accordion">
         <div className="tab-nav-btns">{navBtns}</div>
         {this.props.tabs[this.state.openTab]}
-        <div className="nav-btns">
-          <button type="button" className={this.state.prevBtn ? "prev-tab-btn" : "prev-tab-btn disabled"} onClick={() => this.decrementTab()}>Previous</button>
-          <button type="button" className={this.state.nextBtn ? "next-tab-btn" : "next-tab-btn disabled"} onClick={() => this.incrementTab()}>Next</button>
-        </div>
       </div>
     )
   }
 };
+
+// BACK AND NEXT BUTTONS
+// <div className="nav-btns">
+//   <button type="button" className={this.state.prevBtn ? "prev-tab-btn" : "prev-tab-btn disabled"} onClick={() => this.decrementTab()}>Previous</button>
+//   <button type="button" className={this.state.nextBtn ? "next-tab-btn" : "next-tab-btn disabled"} onClick={() => this.incrementTab()}>Next</button>
+// </div>

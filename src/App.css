@@ -2532,11 +2532,18 @@ Copyright (c) 2015 Daniel Eden
 /* ===============================
       GENERAL LAYOUT STYLES
 =============================== */
-div.header h1 {
-  text-align: center; }
+div.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+  div.App div.content-wrapper {
+    flex: 1; }
+
+div.header {
+  border-bottom: 2px solid grey; }
 
 div.sub-header img.sub-header-icon {
-  margin-right: 0.45rem;
+  margin-right: 0.65rem;
   height: 2.5rem;
   width: auto; }
 div.sub-header h2 {
@@ -2547,6 +2554,31 @@ div.sub-header h2 {
 div.sub-header h5 {
   margin-top: 0.15rem; }
 
+div.tab-content-wrapper, div.content {
+  padding: 1rem; }
+
+div.footer {
+  padding: 1rem; }
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 700px) {
+  div.header {
+    border-bottom: 0; }
+
+  div.tab-content-wrapper, div.content {
+    padding: 0.25rem; } }
+@media screen and (max-width: 425px) {
+  div.sub-header {
+    text-align: center; }
+    div.sub-header img.sub-header-icon {
+      display: block;
+      height: 4rem;
+      margin: 0 auto; }
+
+  div.tab-content-wrapper, div.content {
+    padding: 0.15rem; } }
 /* ===============================
   TABS & TABS-ACCORDION STYLES
 =============================== */
@@ -2560,6 +2592,7 @@ div.tabs-accordion {
     flex-wrap: wrap;
     justify-content: center; }
     div.tabs-accordion div.tab-nav-btns button.tab-nav {
+      width: 7rem;
       margin: 0.25rem;
       padding: 0.5rem 0.75rem;
       border: 2px solid #808080;
@@ -2586,16 +2619,19 @@ div.tabs-accordion {
 =============================== */
 @media screen and (max-width: 700px) {
   div.tabs-accordion {
-    width: 98%; }
+    width: 95%; }
+    div.tabs-accordion div.tab {
+      margin-top: 0.45rem; }
     div.tabs-accordion div.tab-nav-btns {
-      width: 100%;
+      width: 70%;
       display: block; }
       div.tabs-accordion div.tab-nav-btns button.tab-nav {
         margin: 0;
         width: 100%;
         display: block;
         padding: 0.2rem 0.5rem;
-        border-radius: 2px; } }
+        border-radius: 2px;
+        font-size: 1.25rem; } }
 /* ===============================
       GENERAL BUTTON STYLES
 =============================== */
@@ -2645,6 +2681,26 @@ button.disabled {
 =============================== */
 * {
   color: #4d4d4d; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arvo', serif; }
+
+p, button {
+  font-family: 'Titillium Web', sans-serif; }
+
+p {
+  text-indent: 1rem; }
+
+div.header {
+  text-align: center; }
+  div.header h1.header-title {
+    margin-bottom: 0; }
+  div.header h2.header-name {
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: overline;
+    margin-top: 0.4rem; }
+    div.header h2.header-name span.invisible-text {
+      color: #fff; }
 
 /* ===============================
           IMAGE STYLES

@@ -12,6 +12,7 @@ div.tabs-accordion {
     flex-wrap: wrap;
     justify-content: center;
     button.tab-nav {
+      width: 7rem;
       margin: 0.25rem;
       padding: 0.5rem 0.75rem;
       border: 2px solid $medium-grey;
@@ -44,32 +45,14 @@ div.tabs-accordion {
 /* ===============================
         RESPONSIVE STYLES
 =============================== */
-@media screen and (max-width: 1300px) {
-  // div.tabs-accordion {
-  //   width: 95%;
-  //   div.tab-nav-btns {
-  //   //   width: 95%;
-  //     button.tab-nav {
-  //       margin: 0.15rem 0.25rem;
-  //       padding: 0.25rem 0.65rem;
-  //       border-radius: 5px;
-  //       &.disabled {
-  //         border-bottom: 2px solid $medium-grey;
-  //       }
-  //     }
-  //   }
-  //   div.tab {
-  //     padding: 0.5rem;
-  //     margin-bottom: 1rem;
-  //   }
-  // }
-}
-
 @media screen and (max-width: 700px) {
   div.tabs-accordion {
-    width: 98%;
+    width: 95%;
+    div.tab {
+      margin-top: 0.45rem;
+    }
     div.tab-nav-btns {
-      width: 100%;
+      width: 70%;
       display: block;
       button.tab-nav {
         margin: 0;
@@ -77,6 +60,7 @@ div.tabs-accordion {
         display: block;
         padding: 0.2rem 0.5rem;
         border-radius: 2px;
+        font-size: 1.25rem;
       }
     }
   }

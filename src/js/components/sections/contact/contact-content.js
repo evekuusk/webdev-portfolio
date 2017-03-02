@@ -6,7 +6,7 @@ export default class ContactContent extends Component {
   }
   render() {
     return (
-      <div className="contact-content">
+      <div className="contact-content content">
         <p>This is the Contact content section</p>
       </div>
     )
