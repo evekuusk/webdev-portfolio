@@ -4,9 +4,25 @@
     "From here I considered alternate career options with more focus on finding that sense of getting lost in meticulous problem solving.  In a more abstract way than metalsmithing, I found it in programming.",
     "This brings us to today.  I am completing pre-requisite courses to return to school for computer science part-time in evening classes, and I am endlessly eager to learn more and meet new professional challenges."
   ],
-  "LEARNING": {
-    "Treehouse": {
-
-    }
-  }
+  "INDEPENDENT_LEARNING": [
+    [
+      "Treehouse",
+      "http://www.teamtreehouse.com",
+      "Web Design",
+      "JavaScript"
+    ],
+    [
+      "CodeSchool"
+    ],
+    [
+      "Udacity"
+    ]
+  ],
+  "EDUCATION": [
+    [
+      "George Brown College",
+      "Jewellery Arts program",
+      "2012-2015"
+    ]
+  ]
 }

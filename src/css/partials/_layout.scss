@@ -12,6 +12,9 @@ div.App {
     flex: 1;
   }
 }
+body {
+  scroll-behavior: smooth;
+}
 
 // HEADERS & SUB-HEADERS
 div.header {
@@ -43,6 +46,10 @@ div.tab-content-wrapper, div.content {
 // FOOTER
 div.footer {
   padding: 1rem;
+  button {
+    float: right;
+    margin-right: 1rem;
+  }
 }
 
 

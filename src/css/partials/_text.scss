@@ -18,6 +18,17 @@ p {
   text-indent: 1rem;
 }
 
+p.learning-list, p.education-list {
+  span.learning-item, span.education-item {
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  span.list {
+    font-size: 0.9rem;
+  }
+}
+
 div.header {
   text-align: center;
   h1.header-title {

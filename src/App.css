@@ -2539,6 +2539,9 @@ div.App {
   div.App div.content-wrapper {
     flex: 1; }
 
+body {
+  scroll-behavior: smooth; }
+
 div.header {
   border-bottom: 2px solid grey; }
 
@@ -2559,6 +2562,9 @@ div.tab-content-wrapper, div.content {
 
 div.footer {
   padding: 1rem; }
+  div.footer button {
+    float: right;
+    margin-right: 1rem; }
 
 /* ===============================
         RESPONSIVE STYLES
@@ -2690,6 +2696,13 @@ p, button {
 
 p {
   text-indent: 1rem; }
+
+p.learning-list span.learning-item, p.learning-list span.education-item, p.education-list span.learning-item, p.education-list span.education-item {
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  font-size: 1rem; }
+p.learning-list span.list, p.education-list span.list {
+  font-size: 0.9rem; }
 
 div.header {
   text-align: center; }
