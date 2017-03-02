@@ -10,11 +10,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif;
 }
 
+h3.job-header {
+  margin-bottom: 0;
+}
+
+h4.date {
+  margin-top: 0.15rem;
+  font-style: italic;
+}
+
 h5.input-label {
   margin-bottom: 0.15rem;
 }
 
-p, button, label {
+p, button, label, li, span {
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -22,13 +31,18 @@ p {
   text-indent: 1rem;
 }
 
-p.learning-list, p.education-list {
-  span.learning-item, span.education-item {
+span.website {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+p.learning-list, div.education-list {
+  span.learning-item, h4.education-item {
     font-family: 'Arvo', serif;
     font-weight: bold;
     font-size: 1rem;
   }
-  span.list {
+  p.list {
     font-size: 0.9rem;
   }
 }

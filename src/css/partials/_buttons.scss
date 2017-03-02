@@ -14,7 +14,7 @@ button {
     color: $dark-grey;
     border: 2px solid $medium-grey;
   }
-  &.submit {
+  &.email {
     margin-top: 0.65rem;
     width: 6.5rem;
     font-size: 1.15rem;
@@ -22,9 +22,19 @@ button {
   &.disabled {
     background: $medium-grey;
     color: $dark-grey;
-    &.submit {
+    &.email {
       opacity: 0.5;
     }
+  }
+}
+
+div.footer {
+  button.back-to-top {
+    width: 3.5rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

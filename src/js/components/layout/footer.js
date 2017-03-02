@@ -11,9 +11,12 @@ export default class Footer extends Component {
     });
   }
   render() {
+    let imgStyles = {
+      backgroundImage: "url('media/img/placeholder.png')"
+    }
     return (
       <div className="footer">
-        <button className="back-to-top" onClick={() => this.backToTop()}>^</button>
+        <button className="back-to-top" onClick={() => this.backToTop()} style={imgStyles}></button>
       </div>
     )
   }

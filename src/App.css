@@ -2542,6 +2542,9 @@ div.App {
 body {
   scroll-behavior: smooth; }
 
+hr {
+  margin-top: 2rem; }
+
 div.header {
   border-bottom: 2px solid grey; }
 
@@ -2653,15 +2656,22 @@ button {
     background: #d6d6d6;
     color: #2e2e2e;
     border: 2px solid #808080; }
-  button.submit {
+  button.email {
     margin-top: 0.65rem;
     width: 6.5rem;
     font-size: 1.15rem; }
   button.disabled {
     background: #808080;
     color: #2e2e2e; }
-    button.disabled.submit {
+    button.disabled.email {
       opacity: 0.5; }
+
+div.footer button.back-to-top {
+  width: 3.5rem;
+  height: 2.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 div.nav-btns {
   width: 90%;
@@ -2697,20 +2707,31 @@ button.disabled {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif; }
 
+h3.job-header {
+  margin-bottom: 0; }
+
+h4.date {
+  margin-top: 0.15rem;
+  font-style: italic; }
+
 h5.input-label {
   margin-bottom: 0.15rem; }
 
-p, button, label {
+p, button, label, li, span {
   font-family: 'Titillium Web', sans-serif; }
 
 p {
   text-indent: 1rem; }
 
-p.learning-list span.learning-item, p.learning-list span.education-item, p.education-list span.learning-item, p.education-list span.education-item {
+span.website {
+  font-size: 1rem;
+  font-style: italic; }
+
+p.learning-list span.learning-item, p.learning-list h4.education-item, div.education-list span.learning-item, div.education-list h4.education-item {
   font-family: 'Arvo', serif;
   font-weight: bold;
   font-size: 1rem; }
-p.learning-list span.list, p.education-list span.list {
+p.learning-list p.list, div.education-list p.list {
   font-size: 0.9rem; }
 
 div.header {
