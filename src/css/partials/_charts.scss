@@ -1,0 +1,59 @@
+/* ===============================
+      GENERAL BUTTON STYLES
+=============================== */
+
+div.chart-row {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted grey;
+  div.label {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    width: 11rem;
+    padding: 0.15rem;
+    p {
+      vertical-align: middle;
+      margin: auto auto;
+      text-indent: 0;
+    }
+  }
+  div.bar-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    div.bar-box {
+      height: 1rem;
+      width: 2rem;
+      border: 1px solid grey;
+      &.filled {
+        background: grey;
+      }
+    }
+  }
+}
+
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 975px) {
+  div.chart-row {
+    div.bar-layout {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  div.chart-row {
+    width: 98%;
+    div.label {
+      width: 48%;
+    }
+  }
+}

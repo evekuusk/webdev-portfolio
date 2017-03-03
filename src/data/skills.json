@@ -17,13 +17,15 @@
     "Python": ["familiar", 1, {}]
   },
   "TOOLS": {
-    "General Linux & Command Line Tools": ["skilled", 3],
+    "General Linux": ["skilled", 3],
+    "Command Line Tools": ["skilled", 3],
     "Gulp": ["advanced", 4],
     "Node Package Manager": ["skilled", 3],
     "Git": ["advanced", 4],
     "SVN": ["skilled", 3],
     "RESTful Applications": ["skilled", 3],
-    "Responsive Interface Design & User Experience": ["skilled", 3],
+    "Responsive Design": ["skilled", 3],
+    "User Experience": ["skilled", 3],
     "Adobe Photoshop": ["advanced", 4]
   },
   "PRACTICAL": {

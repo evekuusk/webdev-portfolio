@@ -2564,9 +2564,19 @@ div.tab-content-wrapper, div.content {
   padding: 1rem; }
 
 div.footer {
-  padding: 1rem; }
+  padding: 1rem 2rem; }
+  div.footer div.contact {
+    float: left; }
+    div.footer div.contact #g-recaptcha {
+      display: inline-block; }
+    div.footer div.contact button.email {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      margin-left: 0.5rem; }
   div.footer button {
     float: right;
+    margin: auto 1rem;
     margin-right: 1rem; }
 
 /* ===============================
@@ -2577,7 +2587,10 @@ div.footer {
     border-bottom: 0; }
 
   div.tab-content-wrapper, div.content {
-    padding: 0.25rem; } }
+    padding: 0.25rem; }
+
+  div.footer {
+    padding: 1rem; } }
 @media screen and (max-width: 425px) {
   div.sub-header {
     text-align: center; }
@@ -2707,12 +2720,19 @@ button.disabled {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif; }
 
+h3 span.subheader {
+  font-style: italic;
+  font-size: 0.9rem; }
+
 h3.job-header {
   margin-bottom: 0; }
 
 h4.date {
   margin-top: 0.15rem;
   font-style: italic; }
+
+h4.chart-header {
+  text-align: center; }
 
 h5.input-label {
   margin-bottom: 0.15rem; }
@@ -2774,5 +2794,48 @@ textarea {
   textarea {
     width: 90%;
     height: 6rem; } }
+/* ===============================
+      GENERAL BUTTON STYLES
+=============================== */
+div.chart-row {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted grey; }
+  div.chart-row div.label {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    width: 11rem;
+    padding: 0.15rem; }
+    div.chart-row div.label p {
+      vertical-align: middle;
+      margin: auto auto;
+      text-indent: 0; }
+  div.chart-row div.bar-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%; }
+    div.chart-row div.bar-layout div.bar-box {
+      height: 1rem;
+      width: 2rem;
+      border: 1px solid grey; }
+      div.chart-row div.bar-layout div.bar-box.filled {
+        background: grey; }
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 975px) {
+  div.chart-row div.bar-layout {
+    display: none; } }
+@media screen and (max-width: 800px) {
+  div.chart-row {
+    width: 98%; }
+    div.chart-row div.label {
+      width: 48%; } }
 
 /*# sourceMappingURL=App.css.map */

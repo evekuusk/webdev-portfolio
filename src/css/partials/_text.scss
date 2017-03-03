@@ -9,6 +9,12 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif;
 }
+h3 {
+  span.subheader {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+}
 
 h3.job-header {
   margin-bottom: 0;
@@ -17,6 +23,10 @@ h3.job-header {
 h4.date {
   margin-top: 0.15rem;
   font-style: italic;
+}
+
+h4.chart-header {
+  text-align: center;
 }
 
 h5.input-label {

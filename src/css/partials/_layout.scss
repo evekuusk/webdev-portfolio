@@ -49,9 +49,22 @@ div.tab-content-wrapper, div.content {
 
 // FOOTER
 div.footer {
-  padding: 1rem;
+  padding: 1rem 2rem;
+  div.contact {
+    float: left;
+    #g-recaptcha {
+      display: inline-block;
+    }
+    button.email {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      margin-left: 0.5rem;
+    }
+  }
   button {
     float: right;
+    margin: auto 1rem;
     margin-right: 1rem;
   }
 }
@@ -66,6 +79,9 @@ div.footer {
   }
   div.tab-content-wrapper, div.content {
     padding: 0.25rem;
+  }
+  div.footer {
+    padding: 1rem;
   }
 }
 
