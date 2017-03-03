@@ -12,7 +12,6 @@ export default class SkillsChart extends Component {
   };
   componentDidMount() {
     var dataArr = Object.entries(this.props.data)
-    console.log('dataArr', dataArr)
     this.setState({
       'data': dataArr
     })

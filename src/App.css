@@ -2563,12 +2563,18 @@ div.sub-header h5 {
 div.tab-content-wrapper, div.content {
   padding: 1rem; }
 
+div.content div.section {
+  margin: 1rem auto; }
+  div.content div.section div.subsection {
+    margin: 0.75rem auto; }
+
 div.footer {
-  padding: 1rem 2rem; }
+  padding: 2rem; }
   div.footer div.contact {
     float: left; }
     div.footer div.contact #g-recaptcha {
-      display: inline-block; }
+      display: inline-block;
+      margin-left: 1rem; }
     div.footer div.contact button.email {
       display: inline-block;
       float: none;
@@ -2590,7 +2596,9 @@ div.footer {
     padding: 0.25rem; }
 
   div.footer {
-    padding: 1rem; } }
+    padding: 1rem; }
+    div.footer div.contact #g-recaptcha {
+      margin-left: 0; } }
 @media screen and (max-width: 425px) {
   div.sub-header {
     text-align: center; }
@@ -2720,7 +2728,7 @@ button.disabled {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif; }
 
-h3 span.subheader {
+h1 span.subheader, h2 span.subheader, h3 span.subheader, h4 span.subheader, h5 span.subheader, h6 span.subheader {
   font-style: italic;
   font-size: 0.9rem; }
 
@@ -2736,6 +2744,17 @@ h4.chart-header {
 
 h5.input-label {
   margin-bottom: 0.15rem; }
+
+div.header {
+  text-align: center; }
+  div.header h1.header-title {
+    margin-bottom: 0; }
+  div.header h2.header-name {
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: overline;
+    margin-top: 0.4rem; }
+    div.header h2.header-name span.invisible-text {
+      color: #fff; }
 
 p, button, label, li, span {
   font-family: 'Titillium Web', sans-serif; }
@@ -2753,17 +2772,6 @@ p.learning-list span.learning-item, p.learning-list h4.education-item, div.educa
   font-size: 1rem; }
 p.learning-list p.list, div.education-list p.list {
   font-size: 0.9rem; }
-
-div.header {
-  text-align: center; }
-  div.header h1.header-title {
-    margin-bottom: 0; }
-  div.header h2.header-name {
-    font-family: 'Titillium Web', sans-serif;
-    text-decoration: overline;
-    margin-top: 0.4rem; }
-    div.header h2.header-name span.invisible-text {
-      color: #fff; }
 
 /* ===============================
           IMAGE STYLES

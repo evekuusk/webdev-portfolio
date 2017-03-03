@@ -2,6 +2,7 @@
 /* ===============================
        GENERAL TEXT STYLES
 =============================== */
+// GLOBAL
 * {
   color: $medium-dark-grey;
 }
@@ -9,7 +10,9 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arvo', serif;
 }
-h3 {
+
+// HEADER-LEVEL TEXT
+h1, h2, h3, h4, h5, h6 {
   span.subheader {
     font-style: italic;
     font-size: 0.9rem;
@@ -33,6 +36,22 @@ h5.input-label {
   margin-bottom: 0.15rem;
 }
 
+div.header {
+  text-align: center;
+  h1.header-title {
+    margin-bottom: 0;
+  }
+  h2.header-name {
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: overline;
+    margin-top: 0.4rem;
+    span.invisible-text {
+      color: #fff;
+    }
+  }
+}
+
+// CONTENT-LEVEL TEXT
 p, button, label, li, span {
   font-family: 'Titillium Web', sans-serif;
 }
@@ -54,20 +73,5 @@ p.learning-list, div.education-list {
   }
   p.list {
     font-size: 0.9rem;
-  }
-}
-
-div.header {
-  text-align: center;
-  h1.header-title {
-    margin-bottom: 0;
-  }
-  h2.header-name {
-    font-family: 'Titillium Web', sans-serif;
-    text-decoration: overline;
-    margin-top: 0.4rem;
-    span.invisible-text {
-      color: #fff;
-    }
   }
 }

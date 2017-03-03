@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SkillsChart from './skills-chart.js';
+import SkillsList from './skills-list.js';
 
 var introData = require('../../../../data/intro.json');
 var skillsData = require('../../../../data/skills.json');
@@ -28,9 +29,14 @@ export default class HomeContent extends Component {
         </div>
 
         <div className="about-section section">
-          <h3>Skills<br /><span className="subheader">Entirely subjective and therefore largely meaningless qualifiers for my skills</span></h3>
+          <h2>Technical Skills<br /><span className="subheader">Entirely subjective and therefore largely meaningless qualifiers for my skills</span></h2>
             <SkillsChart header="Technical" data={skillsData['TECHNICAL']} />
             <SkillsChart header="Development Tools & Conepts" data={skillsData['TOOLS']} />
+        </div>
+
+        <div className="about-section section">
+          <h2>Practical Skills</h2>
+            <SkillsList header="Practical" data={skillsData['PRACTICAL']} />
         </div>
       </div>
     )
