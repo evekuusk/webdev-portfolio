@@ -21,7 +21,7 @@ export default class SkillsChart extends Component {
       return (
         <div className="chart-row" key={index}>
           <div className="label"><p>{item[0]}</p></div>
-          <div className="bar-layout">
+          <div className={"bar-layout " + item[1][2]}>
             <div className={item[1][1] >= 1 ? 'bar-box filled' : 'bar-box'}></div>
             <div className={item[1][1] >= 2 ? 'bar-box filled' : 'bar-box'}></div>
             <div className={item[1][1] >= 3 ? 'bar-box filled' : 'bar-box'}></div>

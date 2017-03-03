@@ -30,8 +30,70 @@ div.chart-row {
       height: 1rem;
       width: 2rem;
       border: 1px solid grey;
-      &.filled {
-        background: grey;
+    }
+    // colours
+    // default - grey
+    &.grey {
+      div.bar-box {
+        &.filled {
+          background: grey;
+        }
+      }
+    }
+    // HTML - blue
+    &.blue {
+      div.bar-box {
+        &.filled {
+          background: #73a0cf;
+        }
+      }
+    }
+    // CSS - yellow
+    &.yellow {
+      div.bar-box {
+        &.filled {
+          background: #cb9578;
+        }
+      }
+    }
+    // JavaScript - red
+    &.red {
+      div.bar-box {
+        &.filled {
+          background: #cc7192;
+        }
+      }
+    }
+    // PHP - purple
+    &.purple {
+      div.bar-box {
+        &.filled {
+          background: #a67daa;
+        }
+      }
+    }
+    // SQL
+    &.cyan {
+      div.bar-box {
+        &.filled {
+          background: #89e5eb;
+        }
+      }
+    }
+    // Python - green
+    &.green {
+      div.bar-box {
+        &.filled {
+          background: #b6d790;
+        }
+      }
+    }
+    // Skills
+    &.sand {
+      div.bar-box {
+        &.filled {
+          background: $sand;
+        }
       }
     }
   }

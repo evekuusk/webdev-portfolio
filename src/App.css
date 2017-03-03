@@ -2831,8 +2831,22 @@ div.chart-row {
       height: 1rem;
       width: 2rem;
       border: 1px solid grey; }
-      div.chart-row div.bar-layout div.bar-box.filled {
-        background: grey; }
+    div.chart-row div.bar-layout.grey div.bar-box.filled {
+      background: grey; }
+    div.chart-row div.bar-layout.blue div.bar-box.filled {
+      background: #73a0cf; }
+    div.chart-row div.bar-layout.yellow div.bar-box.filled {
+      background: #cb9578; }
+    div.chart-row div.bar-layout.red div.bar-box.filled {
+      background: #cc7192; }
+    div.chart-row div.bar-layout.purple div.bar-box.filled {
+      background: #a67daa; }
+    div.chart-row div.bar-layout.cyan div.bar-box.filled {
+      background: #89e5eb; }
+    div.chart-row div.bar-layout.green div.bar-box.filled {
+      background: #b6d790; }
+    div.chart-row div.bar-layout.sand div.bar-box.filled {
+      background: #f4ecd6; }
 
 /* ===============================
         RESPONSIVE STYLES

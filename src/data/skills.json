@@ -1,32 +1,29 @@
 {
   "TECHNICAL": {
-    "HTML": ["expert", 5, {}],
-    "CSS": ["advanced", 4, {
-      "sass": ["advanced", 4]
-    }],
-    "JavaScript": ["advanced", 4, {
-      "Modern ES6 Practices": ["skilled", 3],
-      "React.js": ["skilled", 3],
-      "AngularJS 1.0": ["experienced", 2],
-      "jQuery": ["expert", 5]
-    }],
-    "PHP": ["skilled", 3, {
-      "CodeIgniter 2": ["familiar", 1]
-    }],
-    "MySQL": ["experienced", 2, {}],
-    "Python": ["familiar", 1, {}]
+    "HTML": ["expert", 5, "blue"],
+    "CSS": ["advanced", 4, "yellow"],
+    "sass": ["advanced", 4, "yellow"],
+    "JavaScript": ["advanced", 4, "red"],
+    "React.js": ["skilled", 3, "red"],
+    "AngularJS 1.0": ["experienced", 2, "red"],
+    "jQuery": ["expert", 5, "red"],
+    "PHP": ["skilled", 3, "purple"],
+    "CodeIgniter 2": ["familiar", 1, "purple"],
+    "MySQL": ["experienced", 2, "cyan"],
+    "Python": ["familiar", 1, "green"]
   },
   "TOOLS": {
-    "General Linux": ["skilled", 3],
-    "Command Line Tools": ["skilled", 3],
-    "Gulp": ["advanced", 4],
-    "Node Package Manager": ["skilled", 3],
-    "Git": ["advanced", 4],
-    "SVN": ["skilled", 3],
-    "RESTful Applications": ["skilled", 3],
-    "Responsive Design": ["skilled", 3],
-    "User Experience": ["skilled", 3],
-    "Adobe Photoshop": ["advanced", 4]
+    "Modern ES6 Practices": ["skilled", 3, "sand"],
+    "General Linux": ["skilled", 3, "sand"],
+    "Command Line Tools": ["skilled", 3, "sand"],
+    "Gulp": ["advanced", 4, "sand"],
+    "Node Package Manager": ["skilled", 3, "sand"],
+    "Git": ["advanced", 4, "sand"],
+    "SVN": ["skilled", 3, "sand"],
+    "RESTful Applications": ["skilled", 3, "sand"],
+    "Responsive Design": ["advanced", 4, "sand"],
+    "User Experience": ["skilled", 3, "sand"],
+    "Adobe Photoshop": ["advanced", 4, "sand"]
   },
   "PRACTICAL": {
     "Growth Mindset": [

@@ -26,14 +26,17 @@
     [
       "Treehouse",
       "http://www.teamtreehouse.com",
-      "Web Design",
-      "JavaScript"
+      "Web Design course track",
+      "Front End Web Development course track",
+      "PHP Development course track",
+      "Full Stack Javascript course track",
+      "Digital Literacy course track"
     ],
     [
-      "CodeSchool"
-    ],
-    [
-      "Udacity"
+      "CodeSchool",
+      "http://www.codeschool.com/",
+      "Shaping Up With AngularJS",
+      "Try SQL"
     ]
   ],
   "EDUCATION": [

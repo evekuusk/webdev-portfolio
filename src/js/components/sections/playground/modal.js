@@ -6,7 +6,7 @@ export default class Modal extends Component {
   render() {
     return (
       <div className="playground-modal">
-
+        
       </div>
     )
   }
