@@ -67,7 +67,6 @@ export default class ExperienceContent extends Component {
       <div className="experience-content content">
         <h2>Professional Work</h2>
           {workList}
-
         <hr />
         <h3>Self-Directed Learning</h3>
           <h5>Completed course tracks & stand-alone courses</h5>
