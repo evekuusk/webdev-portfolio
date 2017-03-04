@@ -4,10 +4,7 @@ export default class SkillsChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      'data': [],
-      'colours': [
-        '#bdbdbd'
-      ]
+      'data': []
     }
   };
   componentDidMount() {

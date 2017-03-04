@@ -22,10 +22,12 @@ hr {
 
 // HEADERS & SUB-HEADERS
 div.header {
-  border-bottom: 2px solid grey;
+  padding-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 div.sub-header {
+  padding-bottom: 0.5rem;
   img.sub-header-icon {
     margin-right: 0.65rem;
     height: 2.5rem;
@@ -54,6 +56,11 @@ div.content {
       margin: 0.75rem auto;
     }
   }
+}
+
+// MINI PROJECTS LAYOUT
+div.modal-project-content {
+  margin-top: 1.5rem;
 }
 
 // FOOTER

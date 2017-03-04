@@ -46,7 +46,7 @@ div.header {
     text-decoration: overline;
     margin-top: 0.4rem;
     span.invisible-text {
-      color: #fff;
+      color: $dark-berry; // must be handled manually
     }
   }
 }

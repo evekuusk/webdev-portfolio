@@ -15,27 +15,12 @@ div.tabs-accordion {
       width: 7rem;
       margin: 0.25rem;
       padding: 0.5rem 0.75rem;
-      border: 2px solid $medium-grey;
       outline: none;
-      border-radius: 5px;
-      background: $light-grey;
-      color: $medium-dark-grey;
       transition: color 400ms, background 300ms;
-      &:hover {
-        background: $medium-grey;
-        color: #fff;
-      }
-      &.disabled {
-        background: #fff;
-        color: $medium-dark-grey;
-      }
     }
   }
   div.tab {
-    background: #fff;
     padding: 1.5rem 2.5rem;
-    border-top: 2px solid $medium-grey;
-    border-bottom: 2px solid $medium-grey;
     margin-bottom: 1.5rem;
   }
 }

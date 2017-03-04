@@ -2546,19 +2546,22 @@ hr {
   margin-top: 2rem; }
 
 div.header {
-  border-bottom: 2px solid grey; }
+  padding-top: 0.5rem;
+  margin-top: 0.75rem; }
 
-div.sub-header img.sub-header-icon {
-  margin-right: 0.65rem;
-  height: 2.5rem;
-  width: auto; }
-div.sub-header h2 {
-  display: inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  vertical-align: top; }
-div.sub-header h5 {
-  margin-top: 0.15rem; }
+div.sub-header {
+  padding-bottom: 0.5rem; }
+  div.sub-header img.sub-header-icon {
+    margin-right: 0.65rem;
+    height: 2.5rem;
+    width: auto; }
+  div.sub-header h2 {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    vertical-align: top; }
+  div.sub-header h5 {
+    margin-top: 0.15rem; }
 
 div.tab-content-wrapper, div.content {
   padding: 1rem; }
@@ -2567,6 +2570,9 @@ div.content div.section {
   margin: 1rem auto; }
   div.content div.section div.subsection {
     margin: 0.75rem auto; }
+
+div.modal-project-content {
+  margin-top: 1.5rem; }
 
 div.footer {
   padding: 2rem; }
@@ -2625,23 +2631,10 @@ div.tabs-accordion {
       width: 7rem;
       margin: 0.25rem;
       padding: 0.5rem 0.75rem;
-      border: 2px solid #808080;
       outline: none;
-      border-radius: 5px;
-      background: #d6d6d6;
-      color: #4d4d4d;
       transition: color 400ms, background 300ms; }
-      div.tabs-accordion div.tab-nav-btns button.tab-nav:hover {
-        background: #808080;
-        color: #fff; }
-      div.tabs-accordion div.tab-nav-btns button.tab-nav.disabled {
-        background: #fff;
-        color: #4d4d4d; }
   div.tabs-accordion div.tab {
-    background: #fff;
     padding: 1.5rem 2.5rem;
-    border-top: 2px solid #808080;
-    border-bottom: 2px solid #808080;
     margin-bottom: 1.5rem; }
 
 /* ===============================
@@ -2686,6 +2679,24 @@ button {
     color: #2e2e2e; }
     button.disabled.email {
       opacity: 0.5; }
+
+div.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  div.projects-list button {
+    width: 11rem;
+    height: 6rem; }
+
+button.close-modal-button {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -1rem;
+  margin-left: -1rem;
+  float: left;
+  height: 2rem;
+  width: 2rem; }
 
 div.footer button.back-to-top {
   width: 3.5rem;
@@ -2754,7 +2765,7 @@ div.header {
     text-decoration: overline;
     margin-top: 0.4rem; }
     div.header h2.header-name span.invisible-text {
-      color: #fff; }
+      color: #3c1319; }
 
 p, button, label, li, span {
   font-family: 'Titillium Web', sans-serif; }
@@ -2846,7 +2857,7 @@ div.chart-row {
     div.chart-row div.bar-layout.green div.bar-box.filled {
       background: #b6d790; }
     div.chart-row div.bar-layout.sand div.bar-box.filled {
-      background: #f4ecd6; }
+      background: #e7e1d0; }
 
 /* ===============================
         RESPONSIVE STYLES
@@ -2859,5 +2870,39 @@ div.chart-row {
     width: 98%; }
     div.chart-row div.label {
       width: 48%; } }
+/* ===============================
+          COLOUR SCHEME
+=============================== */
+div.App div.content-wrapper {
+  background: #98344a; }
+  div.App div.content-wrapper div.header {
+    background: #3c1319;
+    border-bottom: 2px solid #d58a9b; }
+    div.App div.content-wrapper div.header h1.header-title, div.App div.content-wrapper div.header h2.header-name {
+      color: #fff; }
+  div.App div.content-wrapper div.tabs-accordion div.tab-nav-btns button.tab-nav {
+    border: 2px solid #808080;
+    border-radius: 5px;
+    background: #cde7e6;
+    color: #4d4d4d; }
+    div.App div.content-wrapper div.tabs-accordion div.tab-nav-btns button.tab-nav:hover {
+      background: #8ec1be;
+      color: #fff; }
+    div.App div.content-wrapper div.tabs-accordion div.tab-nav-btns button.tab-nav.disabled {
+      background: #fff;
+      color: #4d4d4d; }
+  div.App div.content-wrapper div.tabs-accordion div.tab {
+    background: #f2f2f2;
+    border-radius: 10px;
+    border-top: 2px solid #8ec1be;
+    border-bottom: 2px solid #8ec1be; }
+    div.App div.content-wrapper div.tabs-accordion div.tab div.tab-content div.tab-content-wrapper div.content {
+      border-radius: 5px;
+      background: #fff; }
+div.App div.footer {
+  background: #3c1319;
+  border-top: 2px solid #d58a9b; }
+  div.App div.footer div.contact h5, div.App div.footer div.contact p {
+    color: #fff; }
 
 /*# sourceMappingURL=App.css.map */

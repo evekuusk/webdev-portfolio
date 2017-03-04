@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-export default class Modal extends Component {
+
+export default class SketchbookProject extends Component {
   constructor(props) {
     super(props);
   };
   render() {
     return (
-      <div className="playground-modal">
-        
+      <div>
+        sketchbook project
       </div>
     )
   }

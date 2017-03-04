@@ -1,0 +1,58 @@
+
+/* ===============================
+          COLOUR SCHEME
+=============================== */
+
+div.App {
+  div.content-wrapper {
+    background: $berry;
+    div.header {
+      background: $dark-berry;
+      border-bottom: 2px solid $pink;
+      h1.header-title, h2.header-name {
+        color: $white;
+      }
+    }
+    div.tabs-accordion {
+      div.tab-nav-btns {
+        button.tab-nav {
+          border: 2px solid $medium-grey;
+          border-radius: 5px;
+          background: $light-teal;
+          color: $medium-dark-grey;
+          &:hover {
+            background: $teal;
+            color: #fff;
+          }
+          &.disabled {
+            background: #fff;
+            color: $medium-dark-grey;
+          }
+        }
+      }
+      div.tab {
+        background: $almost-white;
+        border-radius: 10px;
+        border-top: 2px solid $teal;
+        border-bottom: 2px solid $teal;
+        div.tab-content {
+          div.tab-content-wrapper {
+            div.content {
+              border-radius: 5px;
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.footer {
+    background: $dark-berry;
+    border-top: 2px solid $pink;
+    div.contact {
+      h5, p {
+        color: $white;
+      }
+    }
+  }
+}
