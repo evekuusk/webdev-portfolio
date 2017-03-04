@@ -1,33 +1,43 @@
 import React, { Component } from 'react';
 var charGenData = require('../../../../../../data/projects/character-generator-data.json');
+import Character from './character.js';
 
 export default class CharacterGeneratorProject extends Component {
   constructor(props) {
     super(props);
     this.state = {
       'char_type': "",
+      'char_type_description': "",
       'char_type_A': "",
       'char_type_B': "",
       'char_type_C': "",
       'char_type_D': "",
       'char_traits': [],
-      'char_arc': "",
       'char_conflict': "",
       'char_motivation': "",
-      'char_gen_complete': false
+      'char_gen_complete': false,
+      'char_gen_started': false
     }
   };
   chooseAtRandom(choices, current) {
     var new_choice
     if (current === null || current === undefined) {
-
+      var num = this.randomNum(0, choices.length)
+      new_choice = choices[num]
     } else if (typeof(current) === "object") {
 
     } else if (typeof(current) === "string") {
-
+      new_choice = current
+      while (new_choice === current) {
+        var num = this.randomNum(0, choices.length)
+        new_choice = choices[num]
+      }
     }
     return new_choice
   };
+  randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
   chooseTraits(choices, num) {
     var current_type = this.state.char_type
     var A = current_type.charAt(0)
@@ -44,17 +54,22 @@ export default class CharacterGeneratorProject extends Component {
     var choices_D
     {D === 'J' ? choices_D = choices['D']['Judging'] : choices_D = choices['D']['Perceiving']}
 
-    new_choices.push(this.chooseAtRandom(choices_A))
-    new_choices.push(this.chooseAtRandom(choices_B))
-    new_choices.push(this.chooseAtRandom(choices_C))
-    new_choices.push(this.chooseAtRandom(choices_D))
+    new_choices.push(this.chooseAtRandom(choices_A, null))
+    new_choices.push(this.chooseAtRandom(choices_B, null))
+    new_choices.push(this.chooseAtRandom(choices_C, null))
+    new_choices.push(this.chooseAtRandom(choices_D, null))
 
     return new_choices
   }
   generateFullCharacter() {
     console.log(charGenData)
     this.generateCharacterType()
-    this.generateCharacterArc()
+    this.generateCharacterConflict()
+    this.generateCharacterMotivation()
+    this.setState({
+      'char_gen_started': true,
+      'char_gen_complete': true
+    })
   };
   generateCharacterType() {
     var current
@@ -64,7 +79,7 @@ export default class CharacterGeneratorProject extends Component {
       current = null
     }
     var types = charGenData['PERSONALITY_TYPES']
-    var char_type = "INTJ"
+    var char_type = this.chooseAtRandom(types, current)
     var A = char_type.charAt(0)
     var B = char_type.charAt(1)
     var C = char_type.charAt(2)
@@ -73,31 +88,17 @@ export default class CharacterGeneratorProject extends Component {
     {B === 'N' ? B = 'Intuitive' : B = 'Sensing'}
     {C === 'T' ? C = 'Thinking' : C = 'Feeling'}
     {D === 'J' ? D = 'Judging' : D = 'Perceiving'}
+    var description = [A, B, C, D]
     this.setState({
       'char_type': char_type,
+      'char_type_description': description.join(' '),
       'char_type_A': A,
       'char_type_B': B,
       'char_type_C': C,
-      'char_type_D': D
+      'char_type_D': D,
+      'char_gen_started': true
     })
     this.generateCharacterTraits()
-  };
-  generateCharacterArc() {
-    var current
-    if (this.state.char_arc != "") {
-      current = this.state.char_arc
-    } else {
-      current = null
-    }
-    var arcs = charGenData['GROWTH']
-    var arc_start = "aaaa"
-    var arc_end = "bbbb"
-    this.setState({
-      'char_arc': [
-        arc_start,
-        arc_end
-      ]
-    })
   };
   generateCharacterConflict() {
     var current
@@ -107,9 +108,10 @@ export default class CharacterGeneratorProject extends Component {
       current = null
     }
     var conflicts = charGenData['CONFLICTS']
-    var char_conflict = "aaaa"
+    var char_conflict = this.chooseAtRandom(conflicts, current)
     this.setState({
-      'char_conflict': char_conflict
+      'char_conflict': char_conflict,
+      'char_gen_started': true
     })
   };
   generateCharacterMotivation() {
@@ -120,9 +122,10 @@ export default class CharacterGeneratorProject extends Component {
       current = null
     }
     var motivations = charGenData['MOTIVATIONS']
-    var char_motivation = 'aaaa'
+    var char_motivation = this.chooseAtRandom(motivations, current)
     this.setState({
-      'char_motivation': char_motivation
+      'char_motivation': char_motivation,
+      'char_gen_started': true
     })
   }
   generateCharacterTraits() {
@@ -134,7 +137,6 @@ export default class CharacterGeneratorProject extends Component {
     }
     var traits_list = charGenData["TRAITS"]
     var char_traits = this.chooseTraits(traits_list)
-    var char_traits = ['aaaa', 'bbbb', 'cccc', 'dddd']
     this.setState({
       'char_traits': char_traits
     })
@@ -142,13 +144,17 @@ export default class CharacterGeneratorProject extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.generateFullCharacter}>New Character</button>
+        <h5>Generate a complete fictional character...</h5>
+        <button onClick={() => this.generateFullCharacter()}>New Complete Character</button>
         <hr />
+        <h5>...Or roll for traits one at a time</h5>
         <button onClick={() => this.generateCharacterType()}>{this.state.char_type !== "" ? "Re-roll" : "Roll"} for Type</button>
         <button className={this.state.char_type != "" ? "" : "disabled"} onClick={() => this.generateCharacterTraits()}>{this.state.char_type !== "" ? "Re-roll" : "Roll"} for Character Traits</button>
-        <button onClick={() => this.generateCharacterArc()}>{this.state.char_arc !== "" ? "Re-roll" : "Roll"} for Character Arc</button>
         <button onClick={() => this.generateCharacterConflict()}>{this.state.char_conflict !== "" ? "Re-roll" : "Roll"} for Inner Conflict</button>
         <button onClick={() => this.generateCharacterMotivation()}>{this.state.char_motivation !== "" ? "Re-roll" : "Roll"} for Character Motivation</button>
+
+        <hr />
+        {this.state.char_gen_started ? <Character type={this.state.char_type} traits={this.state.char_traits} description={this.state.char_type_description} conflict={this.state.char_conflict} motivation={this.state.char_motivation} /> : null}
       </div>
     )
   }

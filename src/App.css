@@ -2905,4 +2905,11 @@ div.App div.footer {
   div.App div.footer div.contact h5, div.App div.footer div.contact p {
     color: #fff; }
 
+/* ===============================
+      GENERAL LAYOUT STYLES
+=============================== */
+span.char-identifier {
+  font-family: 'Arvo', serif;
+  font-size: 1.15rem; }
+
 /*# sourceMappingURL=App.css.map */

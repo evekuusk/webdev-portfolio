@@ -20,49 +20,53 @@
   "TRAITS": {
     "A": {
       "Introvert": [
-
+        "introverted",
+        "shy"
       ],
       "Extrovert": [
-
+        "extroverted",
+        "lively"
       ]
     },
     "B": {
       "Intuitive": [
-
+        "intuitive",
+        "clever"
       ],
       "Sensing": [
-
+        "sensitive",
+        "keen"
       ]
     },
     "C": {
       "Thinking": [
-
+        "thoughtful",
+        "clever"
       ],
       "Feeling": [
-
+        "touchy-feely",
+        "sensitive"
       ]
     },
     "D": {
       "Perceiving": [
-
+        "perceptive",
+        "intelligent"
       ],
-      "Juding": [
-
+      "Judging": [
+        "judgmental",
+        "analytical"
       ]
     }
   },
-  "GROWTH": {
-    "start": [
-
-    ],
-    "end": [
-
-    ]
-  },
   "CONFLICTS": [
-
+    "selfish",
+    "lonely",
+    "self-descructive"
   ],
   "MOTIVATIONS": [
-
+    "greed",
+    "power",
+    "love"
   ]
 }
