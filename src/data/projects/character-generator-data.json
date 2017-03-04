@@ -1,0 +1,68 @@
+{
+  "PERSONALITY_TYPES": [
+    "INFP",
+    "ESFJ",
+    "ESFP",
+    "ISFJ",
+    "ISFP",
+    "ESTJ",
+    "ESTP",
+    "ISTJ",
+    "ISTP",
+    "INTJ",
+    "INFJ",
+    "ENTJ",
+    "ENTP",
+    "ENFJ",
+    "INTP",
+    "ENFP"
+  ],
+  "TRAITS": {
+    "A": {
+      "Introvert": [
+
+      ],
+      "Extrovert": [
+
+      ]
+    },
+    "B": {
+      "Intuitive": [
+
+      ],
+      "Sensing": [
+
+      ]
+    },
+    "C": {
+      "Thinking": [
+
+      ],
+      "Feeling": [
+
+      ]
+    },
+    "D": {
+      "Perceiving": [
+
+      ],
+      "Juding": [
+
+      ]
+    }
+  },
+  "GROWTH": {
+    "start": [
+
+    ],
+    "end": [
+
+    ]
+  },
+  "CONFLICTS": [
+
+  ],
+  "MOTIVATIONS": [
+
+  ]
+}

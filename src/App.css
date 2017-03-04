@@ -2693,8 +2693,8 @@ button.close-modal-button {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: -1rem;
-  margin-left: -1rem;
-  float: left;
+  margin-right: -1rem;
+  float: right;
   height: 2rem;
   width: 2rem; }
 
@@ -2883,7 +2883,7 @@ div.App div.content-wrapper {
   div.App div.content-wrapper div.tabs-accordion div.tab-nav-btns button.tab-nav {
     border: 2px solid #808080;
     border-radius: 5px;
-    background: #cde7e6;
+    background: #bfe4e3;
     color: #4d4d4d; }
     div.App div.content-wrapper div.tabs-accordion div.tab-nav-btns button.tab-nav:hover {
       background: #8ec1be;

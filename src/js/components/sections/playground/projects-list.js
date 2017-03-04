@@ -18,7 +18,6 @@ export default class ProjectsList extends Component {
     }
   };
   openProjectModal(key) {
-    console.log('test', key)
     var component
     // PROJECT COMPONENTS:
     switch (key) {
