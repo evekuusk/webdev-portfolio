@@ -2912,4 +2912,31 @@ span.char-identifier {
   font-family: 'Arvo', serif;
   font-size: 1.15rem; }
 
+.drag-blue, .drop-blue {
+  background: blue; }
+
+.drag-red, .drop-red {
+  background: red; }
+
+.drag-yellow, .drop-yellow {
+  background: yellow; }
+
+div.draggables {
+  display: flex;
+  justify-content: space-around;
+  text-align: center; }
+  div.draggables div.draggable-wrapper {
+    width: 20%;
+    height: 2rem;
+    border: 1px solid grey; }
+
+div.Droppable {
+  width: 40%;
+  margin: 0 auto; }
+  div.Droppable div.droppable-content {
+    padding: 1rem; }
+
+div.results {
+  text-align: center; }
+
 /*# sourceMappingURL=App.css.map */

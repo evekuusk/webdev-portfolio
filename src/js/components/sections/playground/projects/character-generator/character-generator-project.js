@@ -53,12 +53,24 @@ export default class CharacterGeneratorProject extends Component {
     {C === 'T' ? choices_C = choices['C']['Thinking'] : choices_C = choices['C']['Feeling']}
     var choices_D
     {D === 'J' ? choices_D = choices['D']['Judging'] : choices_D = choices['D']['Perceiving']}
-
+    // create array of three traits
     new_choices.push(this.chooseAtRandom(choices_A, null))
     new_choices.push(this.chooseAtRandom(choices_B, null))
     new_choices.push(this.chooseAtRandom(choices_C, null))
     new_choices.push(this.chooseAtRandom(choices_D, null))
-
+    // make sure none match for overlapping traits
+    while (new_choices[0] === new_choices[1] || new_choices[0] === new_choices[2] || new_choices[0] === new_choices[3]) {
+      new_choices[0] = this.chooseAtRandom(choices_A, null)
+    }
+    while (new_choices[1] === new_choices[2] || new_choices[1] === new_choices[3] || new_choices[1] === new_choices[0]) {
+      new_choices[1] = this.chooseAtRandom(choices_B, null)
+    }
+    while (new_choices[2] === new_choices[3] || new_choices[2] === new_choices[0] || new_choices[2] === new_choices[1]) {
+      new_choices[2] = this.chooseAtRandom(choices_C, null)
+    }
+    while (new_choices[3] === new_choices[0] || new_choices[3] === new_choices[1] || new_choices[3] === new_choices[2]) {
+      new_choices[3] = this.chooseAtRandom(choices_D, null)
+    }
     return new_choices
   }
   generateFullCharacter() {

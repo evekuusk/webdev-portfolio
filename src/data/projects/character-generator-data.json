@@ -20,12 +20,19 @@
   "TRAITS": {
     "A": {
       "Introvert": [
-        "introverted",
-        "shy"
+        "independent",
+        "shy",
+        "self-sufficient",
+        "reserved",
+        "anti-social",
+        "cynical"
       ],
       "Extrovert": [
-        "extroverted",
-        "lively"
+        "outgoing",
+        "lively",
+        "social",
+        "trusting",
+        "boisterous"
       ]
     },
     "B": {

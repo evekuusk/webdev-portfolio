@@ -7,3 +7,49 @@ span.char-identifier {
   font-family: 'Arvo', serif;
   font-size: 1.15rem;
 }
+
+// COLOUR MATCH GAME
+// colours
+$dd-blue: blue;
+$dd-red: red;
+$dd-yellow: yellow;
+
+// colour classes
+.drag-blue, .drop-blue {
+  background: $dd-blue;
+}
+
+.drag-red, .drop-red {
+  background: $dd-red;
+}
+
+.drag-yellow, .drop-yellow {
+  background: $dd-yellow;
+}
+
+// styles
+div.draggables {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  div.draggable-wrapper {
+    width: 20%;
+    height: 2rem;
+    border: 1px solid grey;
+    div.draggable-content {
+
+    }
+  }
+}
+
+div.Droppable {
+  width: 40%;
+  margin: 0 auto;
+  div.droppable-content {
+    padding: 1rem;
+  }
+}
+
+div.results {
+  text-align: center;
+}
