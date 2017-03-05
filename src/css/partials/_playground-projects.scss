@@ -10,11 +10,15 @@ span.char-identifier {
 
 // COLOUR MATCH GAME
 // colours
-$dd-blue: blue;
-$dd-red: red;
-$dd-yellow: yellow;
+$dd-blue: #3f99cc;
+$dd-red: #c93a3a;
+$dd-yellow: #e3de7b;
 
 // colour classes
+.drop-blue, .drop-red, .drop-yellow {
+  transition: background 200;
+}
+
 .drag-blue, .drop-blue {
   background: $dd-blue;
 }
@@ -33,20 +37,26 @@ div.draggables {
   justify-content: space-around;
   text-align: center;
   div.draggable-wrapper {
-    width: 20%;
-    height: 2rem;
-    border: 1px solid grey;
-    div.draggable-content {
-
+    border-radius: 5px;
+    width: 15%;
+    height: 3rem;
+    outline: none;
+    border: 3px solid $white;
+    &:hover {
+      cursor: move;
     }
   }
 }
 
 div.Droppable {
-  width: 40%;
+  transition: background 200;
+  border-radius: 5px;
+  width: 45%;
+  height: 5rem;
   margin: 0 auto;
-  div.droppable-content {
-    padding: 1rem;
+  text-align: center;
+  p {
+    color: $white;
   }
 }
 

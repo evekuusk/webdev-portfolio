@@ -2912,29 +2912,40 @@ span.char-identifier {
   font-family: 'Arvo', serif;
   font-size: 1.15rem; }
 
+.drop-blue, .drop-red, .drop-yellow {
+  transition: background 200; }
+
 .drag-blue, .drop-blue {
-  background: blue; }
+  background: #3f99cc; }
 
 .drag-red, .drop-red {
-  background: red; }
+  background: #c93a3a; }
 
 .drag-yellow, .drop-yellow {
-  background: yellow; }
+  background: #e3de7b; }
 
 div.draggables {
   display: flex;
   justify-content: space-around;
   text-align: center; }
   div.draggables div.draggable-wrapper {
-    width: 20%;
-    height: 2rem;
-    border: 1px solid grey; }
+    border-radius: 5px;
+    width: 15%;
+    height: 3rem;
+    outline: none;
+    border: 3px solid #fff; }
+    div.draggables div.draggable-wrapper:hover {
+      cursor: move; }
 
 div.Droppable {
-  width: 40%;
-  margin: 0 auto; }
-  div.Droppable div.droppable-content {
-    padding: 1rem; }
+  transition: background 200;
+  border-radius: 5px;
+  width: 45%;
+  height: 5rem;
+  margin: 0 auto;
+  text-align: center; }
+  div.Droppable p {
+    color: #fff; }
 
 div.results {
   text-align: center; }

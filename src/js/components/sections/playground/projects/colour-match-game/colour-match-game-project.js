@@ -17,34 +17,80 @@ export default class ColourMatchGameProject extends Component {
       'game_started': false,
       'failed': false,
       'winner': false,
-      'num_required': 9
+      'num_required': 24,
+      'intervals': [1750, 1500, 1250, 1000, 750, 500, 400]
     }
   };
   selectNextColour() {
-    console.log('choosing next colour.....')
     var nextColour
     for (var i = 0; i < this.state.drop_colours_arr.length; i++) {
-      if (this.state.drop_colour === this.state.drop_colours_arr[i] && i < (this.state.drop_colours_arr.length)) {
-        nextColour = this.state.drop_colours_arr[i + 1]
-      } else {
-        nextColour = this.state.drop_colours_arr[0]
+      if (this.state.drop_colour === this.state.drop_colours_arr[i]) {
+        if (i === this.state.drop_colours_arr.length - 1) {
+          nextColour = this.state.drop_colours_arr[0]
+        } else {
+          nextColour = this.state.drop_colours_arr[i + 1]
+        }
+        break;
       }
     }
-    console.log(this.state.drop_colour, nextColour)
     this.setState({
       'drop_colour': nextColour
     })
   }
   rotateDropColours() {
-    var milliseconds = 3000
+    var milliseconds_arr = this.state.intervals
+    // first speed
+    var counter = 0
     rotateTimer = setInterval(function() {
-      console.log('switch')
-      if (milliseconds > 800) {
-        milliseconds = milliseconds - 400
-      }
-      console.log('milliseconds', milliseconds)
+      counter = counter + 1
       this.selectNextColour()
-    }.bind(this), milliseconds)
+      if (counter === 3) {
+        // second speed
+        clearInterval(rotateTimer)
+        counter = 0
+        rotateTimer = setInterval(function() {
+          counter = counter + 1
+          this.selectNextColour()
+          if (counter === 3) {
+            // third speed
+            clearInterval(rotateTimer)
+            counter = 0
+            rotateTimer = setInterval(function() {
+              counter = counter + 1
+              this.selectNextColour()
+              if (counter === 3) {
+                // fourth speed
+                clearInterval(rotateTimer)
+                counter = 0
+                rotateTimer = setInterval(function() {
+                  counter = counter + 1
+                  this.selectNextColour()
+                  if (counter === 3) {
+                    // fifth speed
+                    clearInterval(rotateTimer)
+                    counter = 0
+                    rotateTimer = setInterval(function() {
+                      counter = counter + 1
+                      this.selectNextColour()
+                      if (counter === 3) {
+                        // sixth speed
+                        clearInterval(rotateTimer)
+                        counter = 0
+                        rotateTimer = setInterval(function() {
+                          counter = counter + 1
+                          this.selectNextColour()
+                          // continue until win or fail
+                        }.bind(this), milliseconds_arr[5])
+                      }
+                    }.bind(this), milliseconds_arr[4])
+                  }
+                }.bind(this), milliseconds_arr[3])
+              }
+            }.bind(this), milliseconds_arr[2])
+          }
+        }.bind(this), milliseconds_arr[1])
+      }
+    }.bind(this), milliseconds_arr[0])
   };
   checkFail() {
     if (this.state.incorrect_drops === 4) {
@@ -52,7 +98,6 @@ export default class ColourMatchGameProject extends Component {
         'failed': true
       })
       clearInterval(rotateTimer)
-      console.log('timer stopped')
     } else if (this.state.correct_drops === this.state.num_required) {
       this.setState({
         'winner': true,
@@ -92,13 +137,13 @@ export default class ColourMatchGameProject extends Component {
         <h5>The Dark Souls of nonsense drag-and-drop games!</h5>
         {this.state.failed === false ? <div className="game">
           <div className="draggables">
-            <Draggable className="draggable-wrapper drag-blue" type="colour" data="blue"><div className="draggable-content">blue</div></Draggable>
-            <Draggable className="draggable-wrapper drag-red" type="colour" data="red"><div className="draggable-content">red</div></Draggable>
-            <Draggable className="draggable-wrapper drag-yellow" type="colour" data="yellow"><div className="draggable-content">yellow</div></Draggable>
+            <Draggable className="draggable-wrapper drag-blue" type="colour" data="blue"></Draggable>
+            <Draggable className="draggable-wrapper drag-red" type="colour" data="red"></Draggable>
+            <Draggable className="draggable-wrapper drag-yellow" type="colour" data="yellow"></Draggable>
           </div>
           <hr />
           <Droppable className="droppable-wrapper" types={['colour']} className={this.state.drop_colour} onDrop={this.onDrop.bind(this)}>
-            <div className="droppable-content">DROPPABLE</div>
+            <p>{this.state.game_started === false ? "Drop a colour here to begin!" : null}</p>
           </Droppable>
         </div> : this.state.winner === true ? <div className="results"><p>Winner!</p></div> : <div className="results"><p>You failed!</p><p>Too many incorrect drops.</p></div>}
       </div>
