@@ -40,6 +40,16 @@ div.App {
             div.content {
               border-radius: 5px;
               background: $white;
+              div.projects-list {
+                button {
+                  background-color: $light-teal;
+                  color: $medium-dark-grey;
+                  &:hover {
+                    background-color: $teal;
+                    color: $white;
+                  }
+                }
+              }
             }
           }
         }

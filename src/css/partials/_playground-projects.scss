@@ -2,13 +2,17 @@
       GENERAL LAYOUT STYLES
 =============================== */
 
-// CHARACTER GENERATOR
+/* =================
+CHARACTER GENERATOR
+================= */
 span.char-identifier {
   font-family: 'Arvo', serif;
   font-size: 1.15rem;
 }
 
-// COLOUR MATCH GAME
+/* =================
+  COLOUR MATCH GAME
+================== */
 // colours
 $dd-blue: #3f99cc;
 $dd-red: #c93a3a;
@@ -63,3 +67,7 @@ div.Droppable {
 div.results {
   text-align: center;
 }
+
+/* =================
+     COIN FLIP
+================= */

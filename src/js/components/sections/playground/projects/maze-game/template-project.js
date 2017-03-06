@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-export default class MazeGameProject extends Component {
+export default class TemplateProject extends Component {
   // constructor(props) {
   //   super(props);
   // };
   render() {
     return (
       <div>
-        maze game project
+        template
       </div>
     )
   }

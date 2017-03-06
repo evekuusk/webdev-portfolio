@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import CharacterGeneratorProject from './projects/character-generator/character-generator-project.js';
 import ColourMatchGameProject from './projects/colour-match-game/colour-match-game-project.js';
-import MazeGameProject from './projects/maze-game/maze-game-project.js';
-import MurderMysteryProject from './projects/murder-mystery/murder-mystery-project.js';
-import SketchbookProject from './projects/sketchbook/sketchbook-project.js';
+import CoinFlipProject from './projects/coin-flip/coin-flip-project.js';
+import SortByHeightProject from './projects/sort-by-height/sort-by-height-project.js';
 
 export default class ProjectsList extends Component {
   constructor(props) {
@@ -27,14 +26,11 @@ export default class ProjectsList extends Component {
       case "col-match":
         component = <ColourMatchGameProject />
         break;
-      case "maze-game":
-        component = <MazeGameProject />
+      case "coin-flip":
+        component = <CoinFlipProject />
         break;
-      case "sketch":
-        component = <SketchbookProject />
-        break;
-      case "mur-mys":
-        component = <MurderMysteryProject />
+      case "sort-height":
+        component = <SortByHeightProject />
         break;
       default:
         component = <div>ERROR:  Component not found.</div>

@@ -1,22 +1,14 @@
 {
   "Fictional Character Generator": {
-    "component": "<CharacterGeneratorProject />",
     "key": "char-gen"
   },
   "Colour Matching Game": {
-    "component": "<ColourMatchGameProject />",
     "key": "col-match"
   },
-  "Maze Game": {
-    "component": "<MazeGameProject />",
-    "key": "maze-game"
+  "Coin Flip": {
+    "key": "coin-flip"
   },
-  "Sketchbook": {
-    "component": "<SketchbookProject />",
-    "key": "sketch"
-  },
-  "Murder Mystery": {
-    "component": "<MurderMysteryProject />",
-    "key": "mur-mys"
+  "Sort By Height": {
+    "key": "sort-height"
   }
 }

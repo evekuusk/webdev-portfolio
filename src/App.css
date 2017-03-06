@@ -2683,7 +2683,7 @@ button {
 div.projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-between; }
   div.projects-list button {
     width: 11rem;
     height: 6rem; }
@@ -2899,6 +2899,12 @@ div.App div.content-wrapper {
     div.App div.content-wrapper div.tabs-accordion div.tab div.tab-content div.tab-content-wrapper div.content {
       border-radius: 5px;
       background: #fff; }
+      div.App div.content-wrapper div.tabs-accordion div.tab div.tab-content div.tab-content-wrapper div.content div.projects-list button {
+        background-color: #bfe4e3;
+        color: #4d4d4d; }
+        div.App div.content-wrapper div.tabs-accordion div.tab div.tab-content div.tab-content-wrapper div.content div.projects-list button:hover {
+          background-color: #8ec1be;
+          color: #fff; }
 div.App div.footer {
   background: #3c1319;
   border-top: 2px solid #d58a9b; }
@@ -2908,10 +2914,16 @@ div.App div.footer {
 /* ===============================
       GENERAL LAYOUT STYLES
 =============================== */
+/* =================
+CHARACTER GENERATOR
+================= */
 span.char-identifier {
   font-family: 'Arvo', serif;
   font-size: 1.15rem; }
 
+/* =================
+  COLOUR MATCH GAME
+================== */
 .drop-blue, .drop-red, .drop-yellow {
   transition: background 200; }
 
@@ -2949,5 +2961,9 @@ div.Droppable {
 
 div.results {
   text-align: center; }
+
+/* =================
+     COIN FLIP
+================= */
 
 /*# sourceMappingURL=App.css.map */
