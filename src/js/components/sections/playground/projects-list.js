@@ -4,6 +4,7 @@ import CharacterGeneratorProject from './projects/character-generator/character-
 import ColourMatchGameProject from './projects/colour-match-game/colour-match-game-project.js';
 import CoinFlipProject from './projects/coin-flip/coin-flip-project.js';
 import SortByHeightProject from './projects/sort-by-height/sort-by-height-project.js';
+import PigLatinTranslatorProject from './projects/pig-latin-translator/pig-latin-translator-project.js';
 
 export default class ProjectsList extends Component {
   constructor(props) {
@@ -31,6 +32,9 @@ export default class ProjectsList extends Component {
         break;
       case "sort-height":
         component = <SortByHeightProject />
+        break;
+      case "pig-latin":
+        component = <PigLatinTranslatorProject />
         break;
       default:
         component = <div>ERROR:  Component not found.</div>

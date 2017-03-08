@@ -108,32 +108,21 @@ div.results {
 @include keyframes(spin) {
   from {
     transform: rotateY(0deg);
-    // width: 1px;
-    // height: 1px;
-    // margin: 0;
-    // opacity: 1;
   }
   to {
     transform: rotateY(90deg);
   }
   to {
     transform: rotateY(180deg);
-    // width: 50px;
-    // height: 50px;
-    // margin: -25px;
-    // opacity: 0;
   }
 }
 @mixin spin {
   @include animate(spin, 0.2s, infinite, normal);
+  // possibly alter here with an additional animation to change speed?
 }
-
-
 
 .spinning {
   @include spin;
-  // -webkit-animation: spin 3000 infinite;
-  // animation: spin 3000 infinite;
 }
 
 div.coin-flip-project {
@@ -149,23 +138,47 @@ div.coin-flip-project {
       opacity: 0.5;
     }
   }
-  h4.results {
-
-  }
-  p.results {
-
-  }
   div.animation {
     height: 10rem;
     width: 40%;
     float: right;
-    border: 1px solid grey;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
       height: 60%;
       width: auto;
+    }
+  }
+}
+
+/* =================
+  SORT BY HEIGHT
+================= */
+div.sort-bars {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  div.bar {
+    width: 2%;
+    border: 1px solid grey;
+  }
+}
+
+/* ===============================
+        RESPONSIVE STYLES
+=============================== */
+@media screen and (max-width: 700px) {
+  div.coin-flip-project {
+    hr {
+      margin-top: 0.25rem;
+    }
+    div.animation {
+      height: 10rem;
+      width: 40%;
+      float: none;
+      margin: 0 auto;
     }
   }
 }

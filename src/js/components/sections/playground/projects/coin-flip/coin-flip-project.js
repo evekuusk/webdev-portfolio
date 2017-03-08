@@ -9,6 +9,7 @@ export default class CoinFlipProject extends Component {
       'current_face': null,
       'user_guess': null,
       'spinning': false,
+      'results_class': 'incorrect',
       'coin_img_faces': ["media/img/placeholder.png", "media/img/placeholder.png", "media/img/placeholder.png"]
     }
   };
@@ -41,7 +42,6 @@ export default class CoinFlipProject extends Component {
     })
   };
   rotateCoin() {
-    console.log('spinning!')
     this.setState({
       'spinning': true
     })
@@ -50,15 +50,14 @@ export default class CoinFlipProject extends Component {
         'spinning': false
       })
     }.bind(this), 800)
-
-
-
   }
   render() {
     return (
       <div className="coin-flip-project">
         <h3>Guess the Coin Flip</h3>
-        <h5>The prize is the happy glow of pride!</h5>
+        <h5>The prize is a mildly inflated sense of pride!</h5>
+        <hr />
+        <h4>Select your {this.state.num_times_flipped === 0 ? "first" : "next"} guess</h4>
         <label>Heads</label>
         <input type="radio" name="guess" value="heads" onChange={() => this.handleUserGuess("heads")} />
 
@@ -67,14 +66,15 @@ export default class CoinFlipProject extends Component {
 
         <button className={this.state.user_guess != null ? "flip-btn" : "flip-btn disabled"} onClick={() => this.testUserGuess()}>FLIP</button>
 
-      <div className="animation"><img className={this.state.spinning === true ? "coin spinning" : "coin"} src={this.state.num_times_flipped === 0 ? this.state.coin_img_faces[0] : this.state.current_face === "heads" ? this.state.coin_img_faces[1] : this.state.coin_img_faces[2]} /></div>
+        <div className="animation">
+          <img className={this.state.spinning === true ? "coin spinning" : "coin"} src={this.state.num_times_flipped === 0 ? this.state.coin_img_faces[0] : this.state.current_face === "heads" ? this.state.coin_img_faces[1] : this.state.coin_img_faces[2]} />
+        </div>
 
         <hr />
 
-        <div>
-          <h4 className="results"></h4>
-          <p className="results"></p>
-          <p>You have flipped the coin {this.state.num_times_flipped === 1 ? "1 time" : this.state.num_times_flipped.toString() + " times"} and been correct {this.state.num_times_flipped === 0 ? "0" : (Math.round(this.state.num_times_correct / this.state.num_times_flipped * 100))}% of the time.</p>
+        <div className="results-section">
+          {this.state.num_times_flipped >= 1 ? <h3 className="results">{this.state.current_face === this.state.user_guess ? "You got it right!" : "Not this time, pal!"}</h3> : null}
+          <p className="results">You have flipped the coin {this.state.num_times_flipped === 1 ? "1 time" : this.state.num_times_flipped.toString() + " times"} and been correct {this.state.num_times_flipped === 0 ? "0" : (Math.round(this.state.num_times_correct / this.state.num_times_flipped * 100))}% of the time.</p>
         </div>
       </div>
     )
