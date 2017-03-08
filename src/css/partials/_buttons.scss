@@ -31,8 +31,10 @@ button {
 div.projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   button {
+    margin: 0.5rem;
     width: 11rem;
     height: 6rem;
   }

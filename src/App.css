@@ -2683,8 +2683,10 @@ button {
 div.projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: center;
+  align-items: center; }
   div.projects-list button {
+    margin: 0.5rem;
     width: 11rem;
     height: 6rem; }
 
@@ -2965,5 +2967,70 @@ div.results {
 /* =================
      COIN FLIP
 ================= */
+@-webkit-keyframes spin {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(90deg); }
+  to {
+    transform: rotateY(180deg); } }
+@-moz-keyframes spin {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(90deg); }
+  to {
+    transform: rotateY(180deg); } }
+@-o-keyframes spin {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(90deg); }
+  to {
+    transform: rotateY(180deg); } }
+@keyframes spin {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(90deg); }
+  to {
+    transform: rotateY(180deg); } }
+.spinning {
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: spin;
+  -moz-animation-name: spin;
+  -o-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -o-animation-direction: normal;
+  animation-direction: normal; }
+
+div.coin-flip-project label {
+  margin-right: 0.25rem; }
+div.coin-flip-project input[type='radio'] {
+  margin-right: 1rem; }
+div.coin-flip-project button.flip-btn {
+  width: 5rem; }
+  div.coin-flip-project button.flip-btn.disabled {
+    opacity: 0.5; }
+div.coin-flip-project div.animation {
+  height: 10rem;
+  width: 40%;
+  float: right;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  div.coin-flip-project div.animation img {
+    height: 60%;
+    width: auto; }
 
 /*# sourceMappingURL=App.css.map */
