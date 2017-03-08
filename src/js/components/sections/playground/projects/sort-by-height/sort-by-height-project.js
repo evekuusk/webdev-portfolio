@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
+var timer
+var milliseconds = 0
 
 export default class SortByHeightProject extends Component {
   constructor(props) {
     super(props);
     this.state = {
       'bars_element': <div></div>,
+      'num_items': 250,
+      'division': 12,
       'sort_type': '',
       'current_order': [],
       'ordered_bars': [],
       'randomized': false,
-      'time_elapsed': 0,
-      'bubble_time': 0,
-      'selection_time': 0,
-      'merge_time': 0
+      'timer_start': null,
+      'timer_end': null,
+      'milliseconds': 0
     }
   };
   componentDidMount() {
     var orderedBars = []
     var orderedBarsStr = ""
     var counterArr = []
-    for (var i = 0; i < 75; i++) {
+    for (var i = 0; i < this.state.num_items; i++) {
       counterArr.push(i)
-      var height = i / 4
+      var height = i / this.state.division
       var heightStyle = {
         height: height + "rem"
       }
       orderedBars.push(<div className="bar" key={i} style={heightStyle}></div>)
-      console.log(<div className="bar" key={i} style={heightStyle}></div>)
       orderedBarsStr += <div className="bar" key={i} style={heightStyle}></div>.valueOf()
     }
     var barsDiv = <div className="sort-bars">{orderedBars}</div>
@@ -54,10 +56,15 @@ export default class SortByHeightProject extends Component {
     this.setState({
       'bars_element': barsDiv,
       'current_order': newOrder,
-      'randomized': true
+      'randomized': true,
+      'milliseconds': 0
     })
   };
   bubbleSort() {
+    var start = new Date().getTime()
+    this.setState({
+      'timer_start': start
+    })
     var currentOrder = this.state.current_order
     var ordered
       for (var i = currentOrder.length - 1; i >= 0; i--) {
@@ -83,6 +90,11 @@ export default class SortByHeightProject extends Component {
         }
     }
     this.updateBars(ordered)
+    var end = new Date().getTime()
+    this.setState({
+      'timer_end': end,
+      'milliseconds': end - start
+    })
   };
   updateBars(array) {
     var barsDiv = <div className="sort-bars">{array}</div>
@@ -92,22 +104,19 @@ export default class SortByHeightProject extends Component {
       'randomized': false
     })
   };
-  showSortTimer() {
-
-  };
   render() {
     return (
       <div>
         <h3>Sort By Height</h3>
         <h5>The most fun you've had with an algorithm since...ever!</h5>
         <button onClick={() => this.randomizeBars()}>Randomize</button>
-        <div className="timer">{this.state.time_elapsed} milliseconds</div>
         <hr />
         <div className="sort-bars">{this.state.current_order}</div>
         <hr />
         <button className={this.state.randomized === true ? "sort" : "sort disabled"} onClick={() => this.bubbleSort()}>Bubble Sort</button>
         <button className={this.state.randomized === true ? "sort" : "sort disabled"}>Selection Sort</button>
         <button className={this.state.randomized === true ? "sort" : "sort disabled"}>Merge Sort</button>
+        <p>{this.state.milliseconds} milliseconds</p>
       </div>
     )
   }
