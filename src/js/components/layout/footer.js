@@ -36,7 +36,8 @@ export default class Footer extends Component {
   }
   render() {
     let imgStyles = {
-      backgroundImage: "url('media/img/placeholder.png')"
+      backgroundImage: "url('media/img/back-to-top.png')",
+      backgroundSize: "2rem"
     }
     return (
       <div className="footer">

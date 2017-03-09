@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-var charGenData = require('../../../../../../data/projects/character-generator-data.json');
+var charGenData = require('../../../../../data/projects/character-generator-data.json');
 import Character from './character.js';
 
 export default class CharacterGeneratorProject extends Component {

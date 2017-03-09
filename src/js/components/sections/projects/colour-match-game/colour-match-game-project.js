@@ -17,7 +17,7 @@ export default class ColourMatchGameProject extends Component {
       'game_started': false,
       'failed': false,
       'winner': false,
-      'num_required': 24,
+      'num_required': 29,
       'intervals': [1750, 1500, 1250, 1000, 750, 500, 400]
     }
   };
@@ -145,6 +145,8 @@ export default class ColourMatchGameProject extends Component {
           <Droppable className="droppable-wrapper" types={['colour']} className={this.state.drop_colour} onDrop={this.onDrop.bind(this)}>
             <p>{this.state.game_started === false ? "Drop a colour here to begin!" : null}</p>
           </Droppable>
+          <p>Correct Drops: {this.state.correct_drops}</p>
+          <p>Incorrect Drops: {this.state.incorrect_drops}</p>
         </div> : this.state.winner === true ? <div className="results"><p>Winner!</p></div> : <div className="results"><p>You failed!</p><p>Too many incorrect drops.</p></div>}
       </div>
     )

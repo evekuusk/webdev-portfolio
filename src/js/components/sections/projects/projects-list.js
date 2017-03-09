@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import CharacterGeneratorProject from './projects/character-generator/character-generator-project.js';
-import ColourMatchGameProject from './projects/colour-match-game/colour-match-game-project.js';
-import CoinFlipProject from './projects/coin-flip/coin-flip-project.js';
-import SortByHeightProject from './projects/sort-by-height/sort-by-height-project.js';
-import PigLatinTranslatorProject from './projects/pig-latin-translator/pig-latin-translator-project.js';
+import CharacterGeneratorProject from './character-generator/character-generator-project.js';
+import ColourMatchGameProject from './colour-match-game/colour-match-game-project.js';
+import CoinFlipProject from './coin-flip/coin-flip-project.js';
+import SortByHeightProject from './sort-by-height/sort-by-height-project.js';
 
 export default class ProjectsList extends Component {
   constructor(props) {
@@ -32,9 +31,6 @@ export default class ProjectsList extends Component {
         break;
       case "sort-height":
         component = <SortByHeightProject />
-        break;
-      case "pig-latin":
-        component = <PigLatinTranslatorProject />
         break;
       default:
         component = <div>ERROR:  Component not found.</div>
@@ -80,7 +76,7 @@ export default class ProjectsList extends Component {
       }
     }
     var closeModalButtonBackground = {
-      backgroundImage: "url('media/img/placeholder.png')"
+      backgroundImage: "url('media/img/close-modal.png')"
     }
     return (
       <div className="projects-list">

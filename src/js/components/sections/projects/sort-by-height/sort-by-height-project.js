@@ -8,14 +8,16 @@ export default class SortByHeightProject extends Component {
     this.state = {
       'bars_element': <div></div>,
       'num_items': 250,
-      'division': 12,
+      'division': 15,
       'sort_type': '',
       'current_order': [],
       'ordered_bars': [],
       'randomized': false,
       'timer_start': null,
       'timer_end': null,
-      'milliseconds': 0
+      'milliseconds': 0,
+      'bubble_time': 0,
+      'selection_time': 0
     }
   };
   componentDidMount() {
@@ -91,11 +93,53 @@ export default class SortByHeightProject extends Component {
     }
     this.updateBars(ordered)
     var end = new Date().getTime()
+    var elapsed = end - start
     this.setState({
       'timer_end': end,
-      'milliseconds': end - start
+      'milliseconds': elapsed,
+      'bubble_time': elapsed
     })
   };
+  selectionSort() {
+    var start = new Date().getTime()
+    this.setState({
+      'timer_start': start
+    })
+    var currentOrder = this.state.current_order
+    var ordered
+    var temp
+    for (var i = 0; i < currentOrder.length; i++) {
+      var newOrder = this.state.current_order
+      var smallestValIndex = i
+      for (var j = i + 1; j < currentOrder.length; j++) {
+        var currentElementHeight = currentOrder[smallestValIndex].props.style.height
+        currentElementHeight = currentElementHeight.substring(0, currentElementHeight.length - 3)
+        currentElementHeight = parseFloat(currentElementHeight)
+        var nextElementHeight = currentOrder[j].props.style.height
+        nextElementHeight = nextElementHeight.substring(0, nextElementHeight.length - 3)
+        nextElementHeight = parseFloat(nextElementHeight)
+        if (nextElementHeight < currentElementHeight) {
+          smallestValIndex = j
+        }
+      }
+      temp = newOrder[i]
+      newOrder[i] = newOrder[smallestValIndex]
+      newOrder[smallestValIndex] = temp
+      ordered = newOrder
+    }
+    this.updateBars(ordered)
+    var end = new Date().getTime()
+    var elapsed = end - start
+    this.setState({
+      'timer_end': end,
+      'milliseconds': elapsed,
+      'selection_time': elapsed
+    })
+  };
+  sortingRace() {
+    this.bubbleSort()
+    this.selectionSort()
+  }
   updateBars(array) {
     var barsDiv = <div className="sort-bars">{array}</div>
     this.setState({
@@ -108,15 +152,15 @@ export default class SortByHeightProject extends Component {
     return (
       <div>
         <h3>Sort By Height</h3>
-        <h5>The most fun you've had with an algorithm since...ever!</h5>
-        <button onClick={() => this.randomizeBars()}>Randomize</button>
+        <h5>The most fun you've had with an algorithm since '99!</h5>
         <hr />
         <div className="sort-bars">{this.state.current_order}</div>
         <hr />
+        <button onClick={() => this.randomizeBars()}>Randomize</button>
         <button className={this.state.randomized === true ? "sort" : "sort disabled"} onClick={() => this.bubbleSort()}>Bubble Sort</button>
-        <button className={this.state.randomized === true ? "sort" : "sort disabled"}>Selection Sort</button>
-        <button className={this.state.randomized === true ? "sort" : "sort disabled"}>Merge Sort</button>
-        <p>{this.state.milliseconds} milliseconds</p>
+        <button className={this.state.randomized === true ? "sort" : "sort disabled"} onClick={() => this.selectionSort()}>Selection Sort</button>
+        <h5>Bubble Sort Time Elapsed: {this.state.bubble_time} milliseconds</h5>
+        <h5>Selection Sort Time Elapsed: {this.state.selection_time} milliseconds</h5>
       </div>
     )
   }

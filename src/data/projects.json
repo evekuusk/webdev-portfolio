@@ -10,14 +10,5 @@
   },
   "Sort By Height": {
     "key": "sort-height"
-  },
-  "Pig Latin Translator": {
-    "key": "pig-latin"
-  },
-  "Text Statistics": {
-    "key": "text-stats"
-  },
-  "Scheduler": {
-    "key": "scheduler"
   }
 }
