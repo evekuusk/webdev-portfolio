@@ -10,7 +10,7 @@ export default class CoinFlipProject extends Component {
       'user_guess': null,
       'spinning': false,
       'results_class': 'incorrect',
-      'coin_img_faces': ["media/img/placeholder.png", "media/img/placeholder.png", "media/img/placeholder.png"]
+      'coin_img_faces': ["media/img/penny-null.png", "media/img/penny-heads.png", "media/img/penny-tails.png"]
     }
   };
   handleUserGuess(value) {
@@ -43,13 +43,14 @@ export default class CoinFlipProject extends Component {
   };
   rotateCoin() {
     this.setState({
-      'spinning': true
+      'spinning': true,
+      'current_face': null
     })
     setTimeout(function() {
       this.setState({
         'spinning': false
       })
-    }.bind(this), 800)
+    }.bind(this), 500)
   }
   render() {
     return (
@@ -67,7 +68,7 @@ export default class CoinFlipProject extends Component {
         <button className={this.state.user_guess != null ? "flip-btn" : "flip-btn disabled"} onClick={() => this.testUserGuess()}>FLIP</button>
 
         <div className="animation">
-          <img className={this.state.spinning === true ? "coin spinning" : "coin"} src={this.state.num_times_flipped === 0 ? this.state.coin_img_faces[0] : this.state.current_face === "heads" ? this.state.coin_img_faces[1] : this.state.coin_img_faces[2]} />
+          <img className={this.state.spinning === true ? "coin spinning" : "coin"} src={this.state.current_face === null ? this.state.coin_img_faces[0] : this.state.current_face === "heads" ? this.state.coin_img_faces[1] : this.state.coin_img_faces[2]} />
         </div>
 
         <hr />

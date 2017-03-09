@@ -7,7 +7,7 @@ export default class SortByHeightProject extends Component {
     super(props);
     this.state = {
       'bars_element': <div></div>,
-      'num_items': 250,
+      'num_items': 200,
       'division': 15,
       'sort_type': '',
       'current_order': [],

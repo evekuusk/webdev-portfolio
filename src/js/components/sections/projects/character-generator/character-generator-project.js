@@ -156,6 +156,7 @@ export default class CharacterGeneratorProject extends Component {
   render() {
     return (
       <div>
+        <h3>Fictional Character Generator</h3>
         <h5>Generate a complete fictional character...</h5>
         <button onClick={() => this.generateFullCharacter()}>New Complete Character</button>
         <hr />

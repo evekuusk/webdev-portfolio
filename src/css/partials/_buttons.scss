@@ -14,10 +14,13 @@ button {
     color: $dark-grey;
     border: 2px solid $medium-grey;
   }
-  &.email {
+  &.email, &.linkedin {
     margin-top: 0.65rem;
-    width: 6.5rem;
-    font-size: 1.15rem;
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3.5rem;
   }
   &.disabled {
     background: $medium-grey;

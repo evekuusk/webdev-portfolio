@@ -2670,10 +2670,13 @@ button {
     background: #d6d6d6;
     color: #2e2e2e;
     border: 2px solid #808080; }
-  button.email {
+  button.email, button.linkedin {
     margin-top: 0.65rem;
-    width: 6.5rem;
-    font-size: 1.15rem; }
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3.5rem; }
   button.disabled {
     background: #808080;
     color: #2e2e2e; }
@@ -2703,7 +2706,7 @@ button.close-modal-button {
 div.footer button.back-to-top {
   width: 3.5rem;
   height: 2.5rem;
-  background-size: cover;
+  background-size: 2rem;
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -2786,9 +2789,6 @@ p.learning-list span.learning-item, p.learning-list h4.education-item, div.educa
 p.learning-list p.list, div.education-list p.list {
   font-size: 0.9rem; }
 
-/* ===============================
-          IMAGE STYLES
-=============================== */
 /* ===============================
           INPUT STYLES
 =============================== */
@@ -2996,10 +2996,10 @@ div.results {
   to {
     transform: rotateY(180deg); } }
 .spinning {
-  -webkit-animation-duration: 0.2s;
-  -moz-animation-duration: 0.2s;
-  -o-animation-duration: 0.2s;
-  animation-duration: 0.2s;
+  -webkit-animation-duration: 0.15s;
+  -moz-animation-duration: 0.15s;
+  -o-animation-duration: 0.15s;
+  animation-duration: 0.15s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;

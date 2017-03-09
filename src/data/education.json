@@ -1,0 +1,36 @@
+{
+  "INDEPENDENT_LEARNING": [
+    [
+      "Coursera",
+      "https://www.coursera.org/",
+      "Learning How To Learn"
+    ],
+    [
+      "Treehouse",
+      "https://teamtreehouse.com/evekuusk",
+      "Web Design course track",
+      "Front End Web Development course track",
+      "PHP Development course track",
+      "Full Stack Javascript course track",
+      "Digital Literacy course track"
+    ],
+    [
+      "CodeSchool",
+      "http://www.codeschool.com/",
+      "Shaping Up With AngularJS",
+      "Try SQL"
+    ]
+  ],
+  "EDUCATION": [
+    {
+      "school": "George Brown College",
+      "program": "Jewellery Arts program",
+      "earned": "",
+      "timeline": "2012-2015",
+      "description": "Studied design principles, creative project management, metalsmithing.",
+      "courses": [
+
+      ]
+    }
+  ]
+}

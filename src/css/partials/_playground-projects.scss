@@ -117,8 +117,7 @@ div.results {
   }
 }
 @mixin spin {
-  @include animate(spin, 0.2s, infinite, normal);
-  // possibly alter here with an additional animation to change speed?
+  @include animate(spin, 0.15s, infinite, normal);
 }
 
 .spinning {

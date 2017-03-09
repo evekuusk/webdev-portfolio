@@ -7,12 +7,11 @@
       "website": "www.emz2.ca",
       "start": "September 2015",
       "end": "February 2017",
-      "timeline": "",
-      "technology": ["HTML", "CSS", "JavaScript", "PHP"],
+      "technology": ["HTML", "CSS + sass", "JavaScript + AngularJS 1.0 + React.js + jQuery", "PHP + CodeIgniter2", "Git", "SVN", "MySQL", "Adobe Flash + ActionScript"],
       "accomplishments": [
         "Assisted with interface design & user experience design according to client needs",
         "Independently built front-end of projects from prototype to production",
-        "Performed manual unit testing (some Jest testing for React projects) and end-to-end testing of web applications",
+        "Performed manual unit testing and end-to-end testing of web applications",
         "Assisted integration & live testing with CodeIgniter back-end frameworks with senior programmer",
         "Provided minor database administration using MySQL command line tools & GUI database managers",
         "Maintained good version control practices with Git as well as Subversion for legacy projects",
@@ -20,31 +19,6 @@
         "Consistently improved and learned new skills with every project",
         "Consulted & collaborated with clients on a regular basis to provide UX optimization suggestions, design / interactivity refinements, and provide project progress updates"
       ]
-    }
-  ],
-  "INDEPENDENT_LEARNING": [
-    [
-      "Treehouse",
-      "http://www.teamtreehouse.com",
-      "Web Design course track",
-      "Front End Web Development course track",
-      "PHP Development course track",
-      "Full Stack Javascript course track",
-      "Digital Literacy course track"
-    ],
-    [
-      "CodeSchool",
-      "http://www.codeschool.com/",
-      "Shaping Up With AngularJS",
-      "Try SQL"
-    ]
-  ],
-  "EDUCATION": [
-    {
-      "school": "George Brown College",
-      "program": "Jewellery Arts program",
-      "timeline": "2012-2015",
-      "description": "Studied design principles, creative project management, metalsmithing."
     }
   ]
 }
