@@ -21,6 +21,13 @@
       "Try SQL"
     ]
   ],
+  "BOOKS": [
+    "PHP The Right Way",
+    "Don't Make Me Think, Revisited: A Common Sense Approach to Web and Mobile Usability (Steve Krug)",
+    "HTML and CSS: Design and Build Websites (Jon Duckett)",
+    "JavaScript and jQuery: Interactive Front End Development (Jon Duckett)",
+    "Eloquent JavaScript (Marijn Haverbeke)"
+  ],
   "EDUCATION": [
     {
       "school": "George Brown College",

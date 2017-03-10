@@ -69,11 +69,20 @@
   "CONFLICTS": [
     "selfish",
     "lonely",
-    "self-descructive"
+    "self-descructive",
+    "conflicting loyalties",
+    "indecision",
+    "facing one's fears",
+    "own worst enemy",
+    "an unbreakable vow",
+    "moral dilemma",
+    "lost hope"
   ],
   "MOTIVATIONS": [
     "greed",
     "power",
-    "love"
+    "love",
+    "an unbreakable vow",
+    "to right an old wrong"
   ]
 }

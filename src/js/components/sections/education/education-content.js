@@ -6,16 +6,21 @@ export default class EducationContent extends Component {
     super(props);
     this.state = {
       'learning': [],
+      'books': [],
       'education': []
     }
   }
   componentDidMount() {
     this.setState({
       'learning': educationData['INDEPENDENT_LEARNING'],
+      'books': educationData['BOOKS'],
       'education': educationData['EDUCATION']
     })
   }
   render() {
+    const bookList = this.state.books.map(function(item, index) {
+      return <li key={index}>{item}</li>
+    });
     const learningList = this.state.learning.map(function(item, index) {
       var items = []
       for (var i = 0; i < item.length; i++) {
@@ -57,6 +62,8 @@ export default class EducationContent extends Component {
         <h2>Self-Directed Learning</h2>
           <h5>Completed course tracks & stand-alone courses</h5>
           {learningList}
+        <h2>Written Resources Studied</h2>
+          <ul>{bookList}</ul>
       </div>
     )
   };
