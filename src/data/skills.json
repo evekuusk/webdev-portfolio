@@ -1,20 +1,20 @@
 {
   "TECHNICAL": {
     "HTML": ["expert", 5, "blue"],
-    "CSS": ["advanced", 4, "yellow"],
+    "CSS": ["expert", 5, "yellow"],
     "sass": ["advanced", 4, "yellow"],
     "JavaScript": ["advanced", 4, "red"],
-    "React.js": ["skilled", 3, "red"],
+    "React.js": ["advanced", 4, "red"],
     "AngularJS 1.0": ["experienced", 2, "red"],
-    "jQuery": ["expert", 5, "red"],
-    "PHP": ["skilled", 3, "purple"],
+    "jQuery": ["skilled", 3, "red"],
+    "PHP": ["experienced", 2, "purple"],
     "CodeIgniter 2": ["familiar", 1, "purple"],
     "MySQL": ["experienced", 2, "cyan"],
     "Python": ["familiar", 1, "green"]
   },
   "TOOLS": {
-    "Modern ES6 Practices": ["skilled", 3, "sand"],
-    "General Linux": ["skilled", 3, "sand"],
+    "Modern ES6 Practices": ["experienced", 2, "sand"],
+    "General Linux": ["experienced", 2, "sand"],
     "Command Line Tools": ["skilled", 3, "sand"],
     "Gulp": ["advanced", 4, "sand"],
     "Node Package Manager": ["skilled", 3, "sand"],
@@ -23,30 +23,27 @@
     "RESTful Applications": ["skilled", 3, "sand"],
     "Responsive Design": ["advanced", 4, "sand"],
     "User Experience": ["skilled", 3, "sand"],
-    "Adobe Photoshop": ["advanced", 4, "sand"]
+    "Adobe Photoshop": ["advanced", 4, "sand"],
+    "WordPress": ["experienced", 2, "sand"]
   },
   "PRACTICAL": {
+    "Perseverance & Grit": [
+      "Persists through challenging goals and tasks until the end"
+    ],
     "Growth Mindset": [
-      "Self-motivated learner driven by curiosity",
-      "Strives to consistently learn and improve"
+      "Motivated by curiosity",
+      "Strives to constantly learn and improve"
     ],
     "Problem Solving": [
-      "Methodical approach to solving project problems as well as finding preventative measures by planning key steps before beginning",
-      "Independent worker but unafraid to collaborate and seek assistance when needed"
+      "Methodical approach to overcoming obstacles",
+      "Strives to intelligently predict potential issues and practice preventative measures"
     ],
     "Personal Organization": [
-      "Practices neat and tidy organizational system in both professional and personal life",
-      "Known to systematically colour-code notes",
-      "Genuinely enjoys optimizing daily & weekly to-do goals and time management"
+      "Practices neat and tidy organizational systems in both professional and personal life"
     ],
     "Communication & Teamwork": [
-      "Friendly and candid communication style",
-      "Opinionated and polite in team discussions",
-      "Strives for clarity and straight-forwardness"
-    ],
-    "Perseverance & Grit": [
-      "Stubbornly keeps to goals and tasks until seen to the end",
-      "Doesn't give up when faced with a challenge"
+      "Personable, clear, and candid communication style",
+      "Primarily independent worker, comfortable with collaboration"
     ]
   }
 }

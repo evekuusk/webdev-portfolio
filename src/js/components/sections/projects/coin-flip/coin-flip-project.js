@@ -14,9 +14,9 @@ export default class CoinFlipProject extends Component {
     }
   };
   handleUserGuess(value) {
-    console.log('You are guessing....', value)
     this.setState({
-      'user_guess': value
+      'user_guess': value,
+      'current_face': null
     })
   };
   testUserGuess() {
@@ -28,10 +28,8 @@ export default class CoinFlipProject extends Component {
     } else {
       face = "tails"
     }
-    var correct = false
     var numCorrect = this.state.num_times_correct
     if (guess === face) {
-      correct = true
       numCorrect += 1
     }
     this.rotateCoin()
@@ -68,13 +66,13 @@ export default class CoinFlipProject extends Component {
         <button className={this.state.user_guess != null ? "flip-btn" : "flip-btn disabled"} onClick={() => this.testUserGuess()}>FLIP</button>
 
         <div className="animation">
-          <img className={this.state.spinning === true ? "coin spinning" : "coin"} src={this.state.current_face === null ? this.state.coin_img_faces[0] : this.state.current_face === "heads" ? this.state.coin_img_faces[1] : this.state.coin_img_faces[2]} />
+          <img alt="coin" className={this.state.spinning === true ? "coin spinning" : "coin"} src={this.state.current_face === null ? this.state.coin_img_faces[0] : this.state.current_face === "heads" ? this.state.coin_img_faces[1] : this.state.coin_img_faces[2]} />
         </div>
 
         <hr />
 
         <div className="results-section">
-          {this.state.num_times_flipped >= 1 ? <h3 className="results">{this.state.current_face === this.state.user_guess ? "You got it right!" : "Not this time, pal!"}</h3> : null}
+          {this.state.num_times_flipped >= 1 && this.state.current_face !== null ? <h3 className="results">{this.state.current_face === this.state.user_guess ? "You got it right!" : "Not this time, pal!"}</h3> : null}
           <p className="results">You have flipped the coin {this.state.num_times_flipped === 1 ? "1 time" : this.state.num_times_flipped.toString() + " times"} and been correct {this.state.num_times_flipped === 0 ? "0" : (Math.round(this.state.num_times_correct / this.state.num_times_flipped * 100))}% of the time.</p>
         </div>
       </div>

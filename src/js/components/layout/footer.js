@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Scroll from 'react-scroll';
-import Recaptcha from 'react-recaptcha';
 
 // react-scroll library variable
 var scroll = Scroll.animateScroll;
@@ -62,6 +61,3 @@ export default class Footer extends Component {
     )
   }
 }
-
-// removed for development testing
-// <Recaptcha sitekey="6LfqchcUAAAAAJi5QCHhVBQt49a0tDtpfyTDj_6h" render="explicit" onloadCallback={this.onloadCallback} verifyCallback={this.verifyCallback.bind(this)} />

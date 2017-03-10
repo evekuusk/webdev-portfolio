@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-var timer
-var milliseconds = 0
 
 export default class SortByHeightProject extends Component {
   constructor(props) {
@@ -22,7 +20,6 @@ export default class SortByHeightProject extends Component {
   };
   componentDidMount() {
     var orderedBars = []
-    var orderedBarsStr = ""
     var counterArr = []
     for (var i = 0; i < this.state.num_items; i++) {
       counterArr.push(i)
@@ -31,7 +28,6 @@ export default class SortByHeightProject extends Component {
         height: height + "rem"
       }
       orderedBars.push(<div className="bar" key={i} style={heightStyle}></div>)
-      orderedBarsStr += <div className="bar" key={i} style={heightStyle}></div>.valueOf()
     }
     var barsDiv = <div className="sort-bars">{orderedBars}</div>
     this.setState({
@@ -79,7 +75,6 @@ export default class SortByHeightProject extends Component {
           nextElementHeight = nextElementHeight.substring(0, nextElementHeight.length - 3)
           nextElementHeight = parseFloat(nextElementHeight)
           if (nextElementHeight > currentElementHeight) {
-            var currentOrder = this.state.current_order
             var newOrder = this.state.current_order
             var next = this.state.current_order[nextIndex]
             var current = this.state.current_order[j]

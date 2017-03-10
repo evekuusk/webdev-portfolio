@@ -21,8 +21,8 @@ export default class ExperienceContent extends Component {
       }
 
       var accomplishments = []
-      for (var i = 0; i < item.accomplishments.length; i++) {
-        accomplishments.push(<li key={i}>{item.accomplishments[i]}</li>)
+      for (var j = 0; j < item.accomplishments.length; j++) {
+        accomplishments.push(<li key={j}>{item.accomplishments[j]}</li>)
       }
       return (
         <div className='job-block' key={index}>

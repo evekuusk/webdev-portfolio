@@ -42,42 +42,42 @@ export default class ColourMatchGameProject extends Component {
     // first speed
     var counter = 0
     rotateTimer = setInterval(function() {
-      counter = counter + 1
+      counter += 1
       this.selectNextColour()
       if (counter === 3) {
         // second speed
         clearInterval(rotateTimer)
         counter = 0
         rotateTimer = setInterval(function() {
-          counter = counter + 1
+          counter += 1
           this.selectNextColour()
           if (counter === 3) {
             // third speed
             clearInterval(rotateTimer)
             counter = 0
             rotateTimer = setInterval(function() {
-              counter = counter + 1
+              counter += 1
               this.selectNextColour()
               if (counter === 3) {
                 // fourth speed
                 clearInterval(rotateTimer)
                 counter = 0
                 rotateTimer = setInterval(function() {
-                  counter = counter + 1
+                  counter += 1
                   this.selectNextColour()
                   if (counter === 3) {
                     // fifth speed
                     clearInterval(rotateTimer)
                     counter = 0
                     rotateTimer = setInterval(function() {
-                      counter = counter + 1
+                      counter += 1
                       this.selectNextColour()
                       if (counter === 3) {
                         // sixth speed
                         clearInterval(rotateTimer)
                         counter = 0
                         rotateTimer = setInterval(function() {
-                          counter = counter + 1
+                          counter += 1
                           this.selectNextColour()
                           // continue until win or fail
                         }.bind(this), milliseconds_arr[5])
@@ -106,13 +106,11 @@ export default class ColourMatchGameProject extends Component {
     }
   }
   checkColourMatching(drag, drop) {
-    if (drag == drop) {
-      console.log('CORRECT!')
+    if (drag === drop) {
       this.setState({
         'correct_drops': this.state.correct_drops + 1
       })
     } else {
-      console.log('NOPE!')
       this.setState({
         'incorrect_drops': this.state.incorrect_drops + 1
       })
@@ -142,7 +140,7 @@ export default class ColourMatchGameProject extends Component {
             <Draggable className="draggable-wrapper drag-yellow" type="colour" data="yellow"></Draggable>
           </div>
           <hr />
-          <Droppable className="droppable-wrapper" types={['colour']} className={this.state.drop_colour} onDrop={this.onDrop.bind(this)}>
+          <Droppable types={['colour']} className={"droppable-wrapper " + this.state.drop_colour} onDrop={this.onDrop.bind(this)}>
             <p>{this.state.game_started === false ? "Drop a colour here to begin!" : null}</p>
           </Droppable>
           <p>Correct Drops: {this.state.correct_drops}</p>

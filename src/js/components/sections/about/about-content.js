@@ -24,18 +24,18 @@ export default class HomeContent extends Component {
     return (
       <div className="about-content content">
         <div className="about-section section">
-          <h3>Introduction</h3>
+          <h2>Introduction<br /><span className="subheader">Disclaimer: contains hyperbole and pompous musings</span></h2>
             {introParagraph}
         </div>
 
         <div className="about-section section">
-          <h2>Technical Skills<br /><span className="subheader">Entirely subjective and therefore largely meaningless qualifiers for my skills</span></h2>
+          <h2>Technical Skills<br /><span className="subheader">Disclaimer: entirely subjective and therefore largely meaningless</span></h2>
             <SkillsChart header="Technical" data={skillsData['TECHNICAL']} />
-            <SkillsChart header="Development Tools & Conepts" data={skillsData['TOOLS']} />
+            <SkillsChart header="Development Tools & Concepts" data={skillsData['TOOLS']} />
         </div>
 
         <div className="about-section section">
-          <h2>Practical Skills</h2>
+          <h2>Practical Skills<br /><span className="subheader">See also: excessive cheerfulness</span></h2>
             <SkillsList header="Practical" data={skillsData['PRACTICAL']} />
         </div>
       </div>

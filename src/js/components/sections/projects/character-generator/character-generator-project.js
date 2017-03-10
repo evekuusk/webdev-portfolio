@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 var charGenData = require('../../../../../data/projects/character-generator-data.json');
 import Character from './character.js';
 
+
 export default class CharacterGeneratorProject extends Component {
   constructor(props) {
     super(props);
@@ -20,16 +21,14 @@ export default class CharacterGeneratorProject extends Component {
     }
   };
   chooseAtRandom(choices, current) {
-    var new_choice
+    var new_choice, num
     if (current === null || current === undefined) {
-      var num = this.randomNum(0, choices.length)
+      num = this.randomNum(0, choices.length)
       new_choice = choices[num]
-    } else if (typeof(current) === "object") {
-
     } else if (typeof(current) === "string") {
       new_choice = current
       while (new_choice === current) {
-        var num = this.randomNum(0, choices.length)
+        num = this.randomNum(0, choices.length)
         new_choice = choices[num]
       }
     }
@@ -45,14 +44,27 @@ export default class CharacterGeneratorProject extends Component {
     var C = current_type.charAt(2)
     var D = current_type.charAt(3)
     var new_choices = []
-    var choices_A
-    {A === 'I' ? choices_A = choices['A']['Introvert'] : choices_A = choices['A']['Extrovert']}
-    var choices_B
-    {B === 'N' ? choices_B = choices['B']['Intuitive'] : choices_B = choices['B']['Sensing']}
-    var choices_C
-    {C === 'T' ? choices_C = choices['C']['Thinking'] : choices_C = choices['C']['Feeling']}
-    var choices_D
-    {D === 'J' ? choices_D = choices['D']['Judging'] : choices_D = choices['D']['Perceiving']}
+    var choices_A, choices_B, choices_C, choices_D
+    if (A === 'I') {
+      choices_A = choices['A']['Introvert']
+    } else {
+      choices_A = choices['A']['Extrovert']
+    }
+    if (B === 'N') {
+      choices_B = choices['B']['Intuitive']
+    } else {
+      choices_B = choices['B']['Sensing']
+    }
+    if (C === 'T') {
+      choices_C = choices['C']['Thinking']
+    } else {
+      choices_C = choices['C']['Feeling']
+    }
+    if (D === 'J') {
+      choices_D = choices['D']['Judging']
+    } else {
+      choices_D = choices['D']['Perceiving']
+    }
     // create array of three traits
     new_choices.push(this.chooseAtRandom(choices_A, null))
     new_choices.push(this.chooseAtRandom(choices_B, null))
@@ -74,7 +86,6 @@ export default class CharacterGeneratorProject extends Component {
     return new_choices
   }
   generateFullCharacter() {
-    console.log(charGenData)
     this.generateCharacterType()
     this.generateCharacterConflict()
     this.generateCharacterMotivation()
@@ -85,7 +96,7 @@ export default class CharacterGeneratorProject extends Component {
   };
   generateCharacterType() {
     var current
-    if (this.state.char_type != "") {
+    if (this.state.char_type !== "") {
       current = this.state.char_type
     } else {
       current = null
@@ -96,10 +107,26 @@ export default class CharacterGeneratorProject extends Component {
     var B = char_type.charAt(1)
     var C = char_type.charAt(2)
     var D = char_type.charAt(3)
-    {A === 'I' ? A = 'Introvert' : A = 'Extrovert'}
-    {B === 'N' ? B = 'Intuitive' : B = 'Sensing'}
-    {C === 'T' ? C = 'Thinking' : C = 'Feeling'}
-    {D === 'J' ? D = 'Judging' : D = 'Perceiving'}
+    if (A === 'I') {
+      A = 'Introvert'
+    } else {
+      A = 'Extrovert'
+    }
+    if (B === 'N') {
+      B = 'Intuitive'
+    } else {
+      B = 'Sensing'
+    }
+    if (C === 'T') {
+      C = 'Thinking'
+    } else {
+      C = 'Feeling'
+    }
+    if (D === 'J') {
+      D = 'Judging'
+    } else {
+      D = 'Perceiving'
+    }
     var description = [A, B, C, D]
     this.setState({
       'char_type': char_type,
@@ -114,7 +141,7 @@ export default class CharacterGeneratorProject extends Component {
   };
   generateCharacterConflict() {
     var current
-    if (this.state.char_conflict != "") {
+    if (this.state.char_conflict !== "") {
       current = this.state.char_conflict
     } else {
       current = null
@@ -128,7 +155,7 @@ export default class CharacterGeneratorProject extends Component {
   };
   generateCharacterMotivation() {
     var current
-    if (this.state.char_motivation != "") {
+    if (this.state.char_motivation !== "") {
       current = this.state.char_motivation
     } else {
       current = null
@@ -141,12 +168,6 @@ export default class CharacterGeneratorProject extends Component {
     })
   }
   generateCharacterTraits() {
-    var current_type
-    if (this.state.char_type != "") {
-      current_type = this.state.char_type
-    } else {
-      current_type = null
-    }
     var traits_list = charGenData["TRAITS"]
     var char_traits = this.chooseTraits(traits_list)
     this.setState({
@@ -162,11 +183,11 @@ export default class CharacterGeneratorProject extends Component {
         <hr />
         <h5>...Or roll for traits one at a time</h5>
         <button onClick={() => this.generateCharacterType()}>{this.state.char_type !== "" ? "Re-roll" : "Roll"} for Type</button>
-        <button className={this.state.char_type != "" ? "" : "disabled"} onClick={() => this.generateCharacterTraits()}>{this.state.char_type !== "" ? "Re-roll" : "Roll"} for Character Traits</button>
+        <button className={this.state.char_type !== "" ? "" : "disabled"} onClick={() => this.generateCharacterTraits()}>{this.state.char_type !== "" ? "Re-roll" : "Roll"} for Character Traits</button>
         <button onClick={() => this.generateCharacterConflict()}>{this.state.char_conflict !== "" ? "Re-roll" : "Roll"} for Inner Conflict</button>
         <button onClick={() => this.generateCharacterMotivation()}>{this.state.char_motivation !== "" ? "Re-roll" : "Roll"} for Character Motivation</button>
 
-        <hr />
+        <hr className="line"/>
         {this.state.char_gen_started ? <Character type={this.state.char_type} traits={this.state.char_traits} description={this.state.char_type_description} conflict={this.state.char_conflict} motivation={this.state.char_motivation} /> : null}
       </div>
     )

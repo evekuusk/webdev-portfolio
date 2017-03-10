@@ -2700,8 +2700,8 @@ button.close-modal-button {
   margin-top: -1rem;
   margin-right: -1rem;
   float: right;
-  height: 2rem;
-  width: 2rem; }
+  height: 3rem;
+  width: 3rem; }
 
 div.footer button.back-to-top {
   width: 3.5rem;
@@ -2757,6 +2757,9 @@ h4.date {
 
 h4.chart-header {
   text-align: center; }
+
+h4.disclaimer {
+  color: #98344a; }
 
 h5.input-label {
   margin-bottom: 0.15rem; }
@@ -2912,6 +2915,12 @@ div.App div.footer {
   border-top: 2px solid #d58a9b; }
   div.App div.footer div.contact h5, div.App div.footer div.contact p {
     color: #fff; }
+
+button.close-modal-button {
+  background-color: #8ec1be; }
+  button.close-modal-button:hover {
+    background-color: #bfe4e3;
+    border: 2px solid #8ec1be; }
 
 /* ===============================
       GENERAL LAYOUT STYLES

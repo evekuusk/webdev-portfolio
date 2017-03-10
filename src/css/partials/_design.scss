@@ -66,3 +66,11 @@ div.App {
     }
   }
 }
+
+button.close-modal-button {
+  background-color: $teal;
+  &:hover {
+    background-color: $light-teal;
+    border: 2px solid $teal;
+  }
+}
