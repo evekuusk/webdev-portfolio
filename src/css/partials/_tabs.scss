@@ -35,9 +35,11 @@ div.tabs-accordion {
     width: 95%;
     div.tab {
       margin-top: 0.45rem;
+      padding: 1rem;
     }
     div.tab-nav-btns {
       width: 70%;
+      margin-top: 0.25rem;
       display: block;
       button.tab-nav {
         margin: 0;
@@ -46,6 +48,29 @@ div.tabs-accordion {
         padding: 0.2rem 0.5rem;
         border-radius: 2px;
         font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  div.tabs-accordion {
+    width: 95%;
+    div.tab {
+      margin-top: 0.45rem;
+      padding: 0.45rem;
+      div.tab-content {
+        div.tab-content-wrapper {
+          div.sub-header {
+            img {
+              height: 2.25rem;
+              width: auto;
+            }
+          }
+          div.content {
+            padding: 0.75rem;
+          }
+        }
       }
     }
   }

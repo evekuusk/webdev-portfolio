@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Arvo|Titillium+Web" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="./loading.css" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -18,7 +18,12 @@
     <title>Web Development Portfolio | Eve Kuusk</title>
   </head>
   <body>
-    <div id="root">Loading...</div>
+    <div id="root">
+      <div class="loading">
+        <h1 class="loading">LOADING...</h1>
+        <img src="media/img/eve.gif" alt="loading"/>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

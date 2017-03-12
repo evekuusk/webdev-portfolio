@@ -26,6 +26,10 @@ export default class HomeContent extends Component {
         <div className="about-section section">
           <h2>Introduction<br /><span className="subheader">Disclaimer: contains hyperbole and pompous musings</span></h2>
             {introParagraph}
+            <div className="gif-box">
+              <img src="media/img/eve.gif" alt="me"/>
+              <figcaption>Courtesy of <a href="http://chrisnagyillustration.wordpress.com" target="_blank">Chris Nagy</a></figcaption>
+            </div>
         </div>
 
         <div className="about-section section">
