@@ -25,44 +25,132 @@
         "self-sufficient",
         "reserved",
         "anti-social",
-        "cynical"
+        "cynical",
+        "imaginative",
+        "accepting",
+        "iealist",
+        "spiritual",
+        "cheerful",
+        "low-key",
+        "modest",
+        "reliable",
+        "orderly",
+        "confident",
+        "observant",
+        "innovative",
+        "predictable",
+        "cunning",
+        "charismatic"
       ],
       "Extrovert": [
         "outgoing",
         "lively",
         "social",
         "trusting",
-        "boisterous"
+        "boisterous",
+        "imaginative",
+        "spiritual",
+        "cheerful",
+        "energetic",
+        "prideful",
+        "confident",
+        "innovative",
+        "unpredictable",
+        "charismatic",
+        "assertive",
+        "gregarious",
+        "distractable"
       ]
     },
     "B": {
       "Intuitive": [
         "intuitive",
-        "clever"
+        "clever",
+        "idealist",
+        "daydreamer",
+        "imaginative",
+        "creative",
+        "optimistic",
+        "big-picture person",
+        "intellectual",
+        "cunning",
+        "innovative"
       ],
       "Sensing": [
         "sensitive",
-        "keen"
+        "social",
+        "keen",
+        "organized",
+        "planner",
+        "detail oriented",
+        "observant",
+        "realistic",
+        "pessimistic",
+        "cynical",
+        "pragmatic"
       ]
     },
     "C": {
       "Thinking": [
         "thoughtful",
-        "clever"
+        "clever",
+        "logical",
+        "objective",
+        "thick-skinned",
+        "impersonal",
+        "critical",
+        "judgmental",
+        "rational",
+        "pragmatic",
+        "has firm boundaries",
+        "argumentative",
+        "cold-hearted"
       ],
       "Feeling": [
         "touchy-feely",
-        "sensitive"
+        "sensitive",
+        "subjective",
+        "dislikes conflict",
+        "gentle",
+        "empathetic",
+        "caring",
+        "warm",
+        "passionate",
+        "emotional",
+        "fragile"
       ]
     },
     "D": {
       "Perceiving": [
         "perceptive",
-        "intelligent"
+        "intelligent",
+        "adaptable",
+        "relaxed",
+        "disorganized",
+        "carefree",
+        "procrastinator",
+        "spontaneous",
+        "indecisive",
+        "flexible",
+        "dislikes routine",
+        "finnicky"
       ],
       "Judging": [
         "judgmental",
-        "analytical"
+        "analytical",
+        "decisive",
+        "oragnized",
+        "stubborn",
+        "self-control",
+        "willpower",
+        "focused",
+        "responsible",
+        "planner",
+        "structured",
+        "predictable",
+        "responsible",
+        "high-strung",
+        "thrives on routine"
       ]
     }
   },
@@ -79,13 +167,43 @@
     "lost hope",
     "phobia",
     "pride",
-    "arrogance"
+    "arrogance",
+    "laziness",
+    "narcissism",
+    "sociopathy",
+    "psychopathy",
+    "mental illness",
+    "resentment",
+    "envy",
+    "wanderlust",
+    "paranoia",
+    "suspicion",
+    "misguided sense of duty",
+    "fading intellect",
+    "fading memories",
+    "impatience"
   ],
   "MOTIVATIONS": [
     "greed",
     "power",
     "love",
     "an unbreakable vow",
-    "to right an old wrong"
+    "to right an old wrong",
+    "vengeance",
+    "self-loathing",
+    "resentment",
+    "loyalty",
+    "honour",
+    "faith",
+    "zealotry",
+    "wanderlust",
+    "lust",
+    "mischief",
+    "curiosity",
+    "bloodlust",
+    "idealism",
+    "desire for knowledge",
+    "ambition",
+    "desire for friendship"
   ]
 }
