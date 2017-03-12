@@ -132,7 +132,7 @@ export default class ColourMatchGameProject extends Component {
     return (
       <div>
         <h3>Colour Matching Game</h3>
-        <h5>The Dark Souls of nonsense drag-and-drop games!</h5>
+        <h5>Drag the correct colour into the larger box!</h5>
         {this.state.failed === false ? <div className="game">
           <div className="draggables">
             <Draggable className="draggable-wrapper drag-blue" type="colour" data="blue"></Draggable>

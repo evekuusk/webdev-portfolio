@@ -153,7 +153,7 @@ export default class SortByHeightProject extends Component {
     return (
       <div>
         <h3>Sort By Height</h3>
-        <h5>The most fun you've had with an algorithm since '99!</h5>
+        <h5>The most fun you've ever had with an algorithm!</h5>
         <hr />
         <div className="sort-bars">{this.state.current_order}</div>
         <hr />

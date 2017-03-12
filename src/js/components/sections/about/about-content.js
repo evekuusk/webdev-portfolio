@@ -24,22 +24,22 @@ export default class HomeContent extends Component {
     return (
       <div className="about-content content">
         <div className="about-section section">
-          <h2>Introduction<br /><span className="subheader">Disclaimer: contains hyperbole and pompous musings</span></h2>
+          <h2>Introduction</h2>
             {introParagraph}
             <div className="gif-box">
               <img src="media/img/eve.gif" alt="me"/>
-              <figcaption>Courtesy of <a href="http://chrisnagyillustration.wordpress.com" target="_blank">Chris Nagy</a></figcaption>
+              <figcaption>Courtesy of <a href="http://chrisnagyillustration.wordpress.com" target="_blank">CN Illustration</a></figcaption>
             </div>
         </div>
 
         <div className="about-section section">
-          <h2>Technical Skills<br /><span className="subheader">Disclaimer: entirely subjective and therefore largely meaningless</span></h2>
+          <h2>Technical Skills</h2>
             <SkillsChart header="Technical" data={skillsData['TECHNICAL']} />
             <SkillsChart header="Development Tools & Concepts" data={skillsData['TOOLS']} />
         </div>
 
         <div className="about-section section">
-          <h2>Practical Skills<br /><span className="subheader">See also: excessive cheerfulness</span></h2>
+          <h2>Practical Skills</h2>
             <SkillsList header="Practical" data={skillsData['PRACTICAL']} />
         </div>
       </div>
