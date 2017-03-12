@@ -3,9 +3,13 @@ import React, { Component } from 'react';
 export default class SortByHeightProject extends Component {
   constructor(props) {
     super(props);
+    var numberOfBars = 200
+    if (screen.width <= 550) {
+      numberOfBars = 100
+    }
     this.state = {
       'bars_element': <div></div>,
-      'num_items': 200,
+      'num_items': numberOfBars,
       'division': 15,
       'sort_type': '',
       'current_order': [],
@@ -19,6 +23,7 @@ export default class SortByHeightProject extends Component {
     }
   };
   componentDidMount() {
+
     var orderedBars = []
     var counterArr = []
     for (var i = 0; i < this.state.num_items; i++) {
@@ -30,6 +35,7 @@ export default class SortByHeightProject extends Component {
       orderedBars.push(<div className="bar" key={i} style={heightStyle}></div>)
     }
     var barsDiv = <div className="sort-bars">{orderedBars}</div>
+
     this.setState({
       'bars_element': barsDiv,
       'current_order': orderedBars,

@@ -2880,7 +2880,11 @@ div.chart-row {
     div.chart-row div.bar-layout div.bar-box {
       height: 1rem;
       width: 2rem;
-      border: 1px solid grey; }
+      border: 1px solid grey;
+      border-radius: 5px; }
+      div.chart-row div.bar-layout div.bar-box:not(.filled) {
+        border: 1px dotted #b5b5b5;
+        background: #fff; }
     div.chart-row div.bar-layout.grey div.bar-box.filled {
       background: grey; }
     div.chart-row div.bar-layout.blue div.bar-box.filled {
